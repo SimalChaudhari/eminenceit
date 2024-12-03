@@ -21,9 +21,9 @@ import ReviewsCarousel from "@/widgets/sliders/review-slider";
 export function Home() {
   return (
     <div className="overflow-x-hidden">
-      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+      <div className="relative flex h-screen content-center items-center justify-center pt-0 pb-56">
+        <div className="absolute top-0 h-[70vh] w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
+        <div className="absolute top-0 h-[70vh] w-full bg-black/60 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
@@ -31,11 +31,14 @@ export function Home() {
                 variant="h1"
                 color="white"
                 className="mb-6 font-black lg:text-5xl text-3xl"
+                data-aos="fade-down"
               >
                 EMPOWERING THE TECHNOLOGY
               </Typography>
 
-              <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+              <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12"
+                data-aos="fade-down"
+                >
                 <Typography variant="lead" color="white" className="opacity-80">
                   We are committed to deliver the best technological services that your Business  deserves for its growth.
                 </Typography>
@@ -44,7 +47,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-white px-4 pb-20 pt-4">
+      <section className="-mt-96 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           {/*
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -122,7 +125,8 @@ export function Home() {
 
           <div className="mt-20">
             <div className="mx-auto mt-24 flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-              <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
+              <Card className="shadow-lg border shadow-gray-500/10 rounded-lg"
+                data-aos="zoom-in">
 
                 <CardBody>
                   <Typography
@@ -144,7 +148,9 @@ export function Home() {
           </div>
 
           <div className="mt-20 flex flex-wrap items-center">
-            <div className="-mt-8 w-full px-4 md:w-1/2">
+            <div className="-mt-8 w-full px-4 md:w-1/2" 
+            data-aos="fade-up-right"
+            >
               {/*
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
                 <FingerPrintIcon className="h-8 w-8 text-white " />
@@ -165,7 +171,9 @@ export function Home() {
               </Typography>
 
             </div>
-            <div className="mx-auto mt-5 flex w-full lg:justify-center lg:px-4 px-8 md:w-4/12 lg:mt-0">
+            <div className="mx-auto mt-5 flex w-full lg:justify-center lg:px-4 px-8 md:w-4/12 lg:mt-0"
+                data-aos="fade-up-left"
+                >
               <ul className="list-disc">
                 {objectiveData.map(({ title }) => (
                   <li key={title} className="my-3 text-blue-gray-500 ">

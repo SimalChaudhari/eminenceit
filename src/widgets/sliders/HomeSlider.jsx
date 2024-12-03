@@ -9,7 +9,7 @@ import {
 
 export function HomeSlider({ color, icon, title, description }) {
     return (
-        <Card className="rounded-lg shadow-lg shadow-gray-500/10 h-full lg:mb-10">
+        <Card className="rounded-lg shadow-lg shadow-gray-500/10 h-full lg:mb-10 hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)] transition-all duration-300">
             <CardBody className="lg:p-6 p-0 py-6 lg:px-8 px-4 text-center flex flex-col min-h-[300px]">
                 <div>
                     <IconButton

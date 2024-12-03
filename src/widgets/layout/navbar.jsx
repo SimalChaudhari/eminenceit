@@ -9,6 +9,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Logo from "../../assets/Logo/LOGO_IT_SERVICES_TRANSPARENT.png"
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -46,7 +47,7 @@ export function Navbar({ brandName, routes, action }) {
             <Link
               to={path}
               target={target}
-              className="flex items-center gap-1 p-1 font-bold"
+              className="flex items-center gap-1 p-1 font-bold hover:text-dark-blue"
             >
               {icon &&
                 React.createElement(icon, {
@@ -65,7 +66,10 @@ export function Navbar({ brandName, routes, action }) {
       <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/">
           <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
+            {/*
             {brandName}
+             */}
+             <img src={Logo} alt="Logo" className="h-14"/>
           </Typography>
         </Link>
         <div className="hidden lg:block">{navList}</div>
@@ -74,7 +78,7 @@ export function Navbar({ brandName, routes, action }) {
             href="https://www.material-tailwind.com/blocks?ref=mtkr"
             target="_blank"
           >
-          {/*
+            {/*
             <Button variant="text" size="sm" color="white" fullWidth>
               pro version
             </Button>
@@ -107,7 +111,7 @@ export function Navbar({ brandName, routes, action }) {
           <a
             href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
             target="_blank"
-            className="mb-2 block"
+            className="mb-2 block hover:text-dark-blue"
           >
             <Button variant="text" size="sm" fullWidth>
               pro version
@@ -129,7 +133,7 @@ Navbar.defaultProps = {
       href="https://www.creative-tim.com/product/material-tailwind-kit-react"
       target="_blank"
     >
-    {/*
+      {/*
       <Button variant="gradient" size="sm" fullWidth>
         free download
       </Button>
