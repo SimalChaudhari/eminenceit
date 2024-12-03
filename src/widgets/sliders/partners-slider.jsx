@@ -12,7 +12,7 @@ import Pagarbook from "../../assets/partners_logo/Pagar Book logo.jpg";
 import BizAnalyst from "../../assets/partners_logo/Biz Analyst logo.png";
 import NetProtector from "../../assets/partners_logo/Net protector logo.png";
 import TSPlus from "../../assets/partners_logo/TS Plus logo.png";
-import GetEPay from "../../assets/partners_logo/Biz Analyst logo.png";
+import GetEPay from "../../assets/partners_logo/Get epay logo.png";
 import { Typography } from "@material-tailwind/react";
 
 // Slider data
