@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Typography, Button, Input, Select, Option, Textarea } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout";
 import axios from "axios";
+import Contact_Map from "../assets/images/contactus_page.jpg"
 
 export function ContactUs() {
 
@@ -114,6 +115,8 @@ export function ContactUs() {
                             Our Location
                         </Typography>
                         <div className="rounded-lg overflow-hidden shadow-lg">
+                        <img src={Contact_Map} alt="Contact_Map" />
+                        {/*
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=YourGoogleMapEmbedCode"
                                 width="100%"
@@ -123,6 +126,7 @@ export function ContactUs() {
                                 className="border-0 w-full h-64"
                                 title="Google Map"
                             ></iframe>
+                            */}
                         </div>
                     </div>
 
