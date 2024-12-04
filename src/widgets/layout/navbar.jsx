@@ -77,7 +77,9 @@ export function Navbar({ brandName, routes, action }) {
           </MenuHandler>
           <MenuList className="w-auto">
             {dropdownRoutes.map(({ name, path, href, target }) => (
-              <MenuItem key={name} >
+              <Link key={name} className="flex py-2 hover:bg-gray-100 px-2 rounded-lg" 
+              to={path}
+              >
                 {href ? (
                   <a
                     href={href}
@@ -95,7 +97,7 @@ export function Navbar({ brandName, routes, action }) {
                     {name}
                   </Link>
                 )}
-              </MenuItem>
+              </Link>
             ))}
           </MenuList>
         </Menu>

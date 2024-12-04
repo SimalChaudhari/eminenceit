@@ -107,6 +107,7 @@ export function OurUSP() {
                                 </Typography>
                             </div>
                         </div>
+                        <hr className="lg:mb-20" />
 
                     </div>
                 </div>
@@ -114,11 +115,11 @@ export function OurUSP() {
 
 
             {/* Main Content */}
-            <section className="relative bg-white py-24">
-                <div className="container mx-auto" data-aos="fade-down">
-                    <div className="flex flex-wrap -mt-20 justify-between gap-1">
+            <section className="relative bg-white pb-24 pt-14">
+                <div className="container mx-auto px-4" data-aos="fade-down">
+                    <div className="flex flex-wrap -mt-20 justify-between lg:gap-3 gap-10">
                         {/* Our Expertise Section */}
-                        <div className="w-full lg:w-[30%]">
+                        <div className="w-full lg:w-[49%]">
                             <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)]">
                                 <Typography
                                     className="font-bold text-blue-gray-900 mb-4 lg:text-3xl text-2xl"
@@ -137,7 +138,7 @@ export function OurUSP() {
                         </div>
 
                         {/* Technical Exposures Section */}
-                        <div className="w-full lg:w-[30%]">
+                        <div className="w-full lg:w-[49%]">
                             <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)]">
                                 <Typography
                                     className="font-bold text-blue-gray-900 mb-4 lg:text-3xl text-2xl"
@@ -158,26 +159,94 @@ export function OurUSP() {
                             </div>
                         </div>
 
-                        {/* Achievements / Awards Section */}
-                        <div className="w-full lg:w-[30%]">
-                            <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)]">
-                                <Typography
-                                    className="font-bold text-blue-gray-900 mb-4 lg:text-3xl text-2xl"
-                                >
-                                    Achievements / Awards
-                                </Typography>
-                                <hr className="lg:mb-5" />
-                                <ul className="list-disc pl-5 space-y-2 text-blue-gray-600">
-                                    <li>15+ Years Expertise in the Same Domain</li>
-                                    <li>800+ Happy Clients</li>
-                                    <li>1000+ Projects Successfully Completed</li>
-                                    <li>98% Customer Retention</li>
-                                </ul>
+                    </div>
+                    <hr className="lg:mt-20" />
+                </div>
+            </section>
+
+
+            <section className="relative bg-white pb-24">
+                <div className="container mx-auto px-4" data-aos="fade-down">
+                    <Typography
+                        className="font-bold text-blue-gray-900 mb-8 lg:text-3xl text-2xl text-left"
+                    >
+                        Achievements / Awards
+                    </Typography>
+                    {/* Achievements / Awards Section */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+                        {/* Card 1 */}
+                        <div className="relative group overflow-hidden rounded-lg">
+                            <img
+                                src="https://3ktechnologies.com/wp-content/uploads/2023/05/healthcare-h.jpg" // Replace with actual image
+                                alt="15+ Years Expertise"
+                                className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75 rounded-lg"></div>
+                            <div className="absolute bottom-5 left-4 text-white">
+                                <span className="font-bold lg:text-3xl md:text-2xl text-xl border-b-2">
+                                    15+ Years Expertise
+                                </span>
+                                <p className="lg:text-xl md:text-lg text-sm mt-5">
+                                    Over a decade of experience in the same domain, delivering excellence.
+                                </p>
+                            </div>
+                        </div>
+                        {/* Card 2 */}
+                        <div className="relative group overflow-hidden rounded-lg">
+                            <img
+                                src="https://3ktechnologies.com/wp-content/uploads/2023/05/finance-h.jpg" // Replace with actual image
+                                alt="800+ Happy Clients"
+                                className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75 rounded-lg"></div>
+                            <div className="absolute bottom-5 left-4 text-white">
+                                <span className="font-bold lg:text-3xl md:text-2xl text-xl border-b-2">
+                                    800+ Happy Clients
+                                </span>
+                                <p className="lg:text-xl md:text-lg text-sm mt-5">
+                                    Trusted by hundreds of satisfied clients worldwide.
+                                </p>
+                            </div>
+                        </div>
+                        {/* Card 3 */}
+                        <div className="relative group overflow-hidden rounded-lg">
+                            <img
+                                src="https://3ktechnologies.com/wp-content/uploads/2023/05/hightech-h.jpg" // Replace with actual image
+                                alt="1000+ Projects"
+                                className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75 rounded-lg"></div>
+                            <div className="absolute bottom-5 left-4 text-white">
+                                <span className="font-bold lg:text-3xl md:text-2xl text-xl border-b-2">
+                                    1000+ Projects
+                                </span>
+                                <p className="lg:text-xl md:text-lg text-sm mt-5">
+                                    Successfully completed over a thousand projects.
+                                </p>
+                            </div>
+                        </div>
+                        {/* Card 4 */}
+                        <div className="relative group overflow-hidden rounded-lg">
+                            <img
+                                src="https://3ktechnologies.com/wp-content/uploads/2023/05/publicsector-h.jpg" // Replace with actual image
+                                alt="98% Retention Rate"
+                                className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75 rounded-lg"></div>
+                            <div className="absolute bottom-5 left-4 text-white">
+                                <span className="font-bold lg:text-3xl md:text-2xl text-xl border-b-2">
+                                    98% Retention Rate
+                                </span>
+                                <p className="lg:text-xl md:text-lg text-sm mt-5">
+                                    Our dedication ensures a high retention rate for clients.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+
 
 
             <div className="bg-white">

@@ -45,42 +45,63 @@ const CustomNextArrow = ({ onClick }) => (
       cursor: "pointer",
     }}
   >
-  <MdOutlineArrowForwardIos className="text-3xl text-white font-extrabold" />
+    <MdOutlineArrowForwardIos className="text-3xl text-white font-extrabold" />
   </div>
 );
 
 // Custom Dots Component
-const CustomDots = (dots) => (
-  <ul
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      listStyle: "none",
-      padding: "10px",
-    }}
-  >
-    {dots.map((dot, index) => (
-      <li
-        key={index}
+// Custom Dots Component
+const CustomDots = ({ dots }) => {
+
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        padding: "10px 0",
+        position: "relative",
+        top: "-50px",
+        zIndex: 10,
+      }}
+    >
+      <ul
         style={{
-          width: "12px",
-          height: "12px",
-          margin: "0 5px",
-          backgroundColor: dot.props.className.includes("slick-active")
-            ? "black"
-            : "gray",
-          borderRadius: "50%",
-          cursor: "pointer",
+          display: "flex",
+          gap: "10px",
+          listStyle: "none",
+          margin: 0,
+          padding: 0,
         }}
-        onClick={dot.props.onClick}
-      />
-    ))}
-  </ul>
-);
+      >
+        {dots.map((dot, index) => (
+          <li
+            key={index}
+            style={{
+              width: dot.props.className.includes("slick-active") ? "30px" : "12px",
+              height: "12px",
+              backgroundColor: dot.props.className.includes("slick-active") ? "white" : "transparent",
+              border: "2px solid #fff",
+              borderRadius: dot.props.className.includes("slick-active") ? "30px" : "50%",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+            onClick={dot.props.onClick}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+
+
+
+
 
 const HomeHeroSliderComponent = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -90,6 +111,7 @@ const HomeHeroSliderComponent = () => {
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     // appendDots: CustomDots,
+    appendDots: (dots) => <CustomDots dots={dots} />,
   };
 
   return (
