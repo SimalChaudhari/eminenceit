@@ -160,7 +160,7 @@ Footer.defaultProps = {
   ],
   copyright: (
     <p className="text-white transition-colors hover:text-blue-500 cursor-pointer">
-    copyright @ eminenceitservices, 2024 all rights reserved.
+    copyright © eminenceitservices, 2024 all rights reserved.
     </p>
   ),
 };
