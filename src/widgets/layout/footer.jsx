@@ -6,7 +6,7 @@ const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
-    <footer className="relative px-4 pt-8 pb-6">
+    <footer className="relative px-4 pt-8 pb-6 bg-custome-blue">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 md:w-2/6">
@@ -45,7 +45,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                 <Typography
                   variant="small"
                   color="blue-gray"
-                  className="mb-2 block font-medium uppercase cursor-pointer"
+                  className="mb-2 block font-medium uppercase cursor-pointer text-white text-xl"
                 >
                   {name}
                 </Typography>
@@ -56,7 +56,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                         target="_blank"
                         rel="noreferrer"
                         variant="small"
-                        className="mb-2 block font-normal text-blue-gray-500 hover:text-blue-gray-700 cursor-pointer"
+                        className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg"
                       >
                         {item.name}
                       </Typography>
@@ -72,7 +72,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
           <div className="mx-auto w-full px-4 text-center">
             <Typography
               variant="small"
-              className="font-normal text-blue-gray-500"
+              className="font-normal text-blue-gray-500 text-lg"
             >
               {copyright}
             </Typography>
@@ -89,22 +89,22 @@ Footer.defaultProps = {
     "Easy to use React components for Tailwind CSS and Material Design.",
   socials: [
     {
-      color: "gray",
+      color: "white",
       name: "whatsapp",
       path: "https://www.twitter.com/creativetim",
     },
     {
-      color: "gray",
+      color: "white",
       name: "instagram",
       path: "https://www.instagram.com/creativetimofficial/",
     },
     {
-      color: "gray",
+      color: "white",
       name: "facebook",
       path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
     },
     {
-      color: "gray",
+      color: "white",
       name: "linkedin",
       path: "https://github.com/creativetimofficial/material-tailwind",
     },
@@ -159,7 +159,7 @@ Footer.defaultProps = {
     },
   ],
   copyright: (
-    <p className="text-blue-gray-500 transition-colors hover:text-blue-500 cursor-pointer">
+    <p className="text-white transition-colors hover:text-blue-500 cursor-pointer">
     copyright @ eminenceitservices, 2024 all rights reserved.
     </p>
   ),

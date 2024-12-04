@@ -11,7 +11,7 @@ export function ReviewSlider({ image, name, review }) {
             alt={name}
             className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
           />
-          <Typography variant="h5" className="mb-2" color="blue-gray">
+          <Typography variant="h5" className="mb-2 text-dark-blue" color="blue-gray">
             {name}
           </Typography>
         </div>

@@ -84,20 +84,20 @@ export function ContactUs() {
 
     return (
         <div className="overflow-x-hidden">
-            {/* Hero Section */}
             <section className="relative block h-[50vh]">
-                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-105" />
+                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/WebDevAppBG.jpg')] bg-cover bg-center scale-105" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center">
-                        <div className="ml-auto mr-auto px-4 text-center lg:w-8/12 mt-44">
-                            <Typography
-                                variant="h1"
-                                color="white"
-                                className="mb-6 font-black lg:text-5xl text-3xl"
+                        <div className="ml-auto mr-auto px-4 text-center lg:w-8/12 mt-48">
+                            <h1
+                            variant="h1"
+                            color="white"
+                            className="mb-6 font-black lg:text-7xl md:text-6xl  text-5xl text-white "
+                            data-aos="fade-down"
                             >
                                 Contact Us
-                            </Typography>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -108,12 +108,14 @@ export function ContactUs() {
                 <div className="container mx-auto px-4">
                     {/* Google Maps Section */}
                     <div className="mb-10">
+                    {/*
                         <Typography
                             variant="h3"
                             className="font-bold text-blue-gray-900 mb-4 text-center"
                         >
                             Our Location
                         </Typography>
+                    */}
                         <div className="rounded-lg overflow-hidden shadow-lg">
                         <img src={Contact_Map} alt="Contact_Map" />
                         {/*

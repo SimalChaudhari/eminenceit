@@ -7,12 +7,19 @@ import {
   Typography,
   Button,
   IconButton,
+  MenuItem,
+  Menu,
+  MenuHandler,
+  MenuList,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../assets/Logo/LOGO_IT_SERVICES_TRANSPARENT.png"
+import FT_Logo from "../../assets/Logo/FT_LOGO_EMINENCE_TRANSPARENT.png"
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
+  const [openMenu, setOpenMenu] = React.useState(false);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -21,9 +28,14 @@ export function Navbar({ brandName, routes, action }) {
     );
   }, []);
 
-  const navList = (
+
+  // Split routes into visible and dropdown items
+  const visibleRoutes = routes.slice(0, 3); // Show only the first 3 items
+  const dropdownRoutes = routes.slice(3); // Remaining items go to dropdown
+
+  const navListDesk = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {routes.map(({ name, path, icon, href, target }) => (
+      {visibleRoutes.map(({ name, path, href, target }) => (
         <Typography
           key={name}
           as="li"
@@ -37,10 +49,77 @@ export function Navbar({ brandName, routes, action }) {
               target={target}
               className="flex items-center gap-1 p-1 font-bold"
             >
-              {icon &&
-                React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
-                })}
+
+              {name}
+            </a>
+          ) : (
+            <Link
+              to={path}
+              target={target}
+              className="flex items-center gap-1 p-1 font-bold hover:text-dark-blue text-lg"
+            >
+              {name}
+            </Link>
+          )}
+        </Typography>
+      ))}
+      {dropdownRoutes.length > 0 && (
+        <Menu open={openMenu} handler={setOpenMenu}>
+          <MenuHandler>
+            <Typography
+              as="li"
+              variant="small"
+              color="inherit"
+              className="capitalize cursor-pointer p-1 font-bold hover:text-dark-blue flex items-center gap-1 text-lg"
+            >
+              More <MdKeyboardArrowDown className="text-xl" />
+            </Typography>
+          </MenuHandler>
+          <MenuList className="w-auto">
+            {dropdownRoutes.map(({ name, path, href, target }) => (
+              <MenuItem key={name} >
+                {href ? (
+                  <a
+                    href={href}
+                    target={target}
+                    className="text-black font-bold hover:text-dark-blue text-lg"
+                  >
+                    {name}
+                  </a>
+                ) : (
+                  <Link
+                    to={path}
+                    target={target}
+                    className="text-black font-bold hover:text-dark-blue text-lg"
+                  >
+                    {name}
+                  </Link>
+                )}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
+      )}
+    </ul>
+  );
+
+  const navList = (
+    <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      {routes.map(({ name, path, href, target }) => (
+        <Typography
+          key={name}
+          as="li"
+          variant="small"
+          color="inherit"
+          className="capitalize"
+        >
+          {href ? (
+            <a
+              href={href}
+              target={target}
+              className="flex items-center gap-1 p-1 font-bold"
+            >
+
               {name}
             </a>
           ) : (
@@ -49,45 +128,31 @@ export function Navbar({ brandName, routes, action }) {
               target={target}
               className="flex items-center gap-1 p-1 font-bold hover:text-dark-blue"
             >
-              {icon &&
-                React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
-                })}
               {name}
             </Link>
           )}
         </Typography>
       ))}
+    
     </ul>
   );
 
   return (
-    <MTNavbar color="transparent" className="p-3">
-      <div className="container mx-auto flex items-center justify-between text-white">
+    <div color="transparent" className="lg:p-3 py-3">
+      <div className=" flex items-center justify-between lg:gap-32 md:gap-2 gap-0 text-black">
+      <div className="hidden lg:block w-2/12"></div>
         <Link to="/">
           <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
             {/*
             {brandName}
-             */}
-             <img src={Logo} alt="Logo" className="h-14"/>
+            <img src={Logo} alt="Logo" className="h-14" />
+            */}
+            <img src={FT_Logo} alt="Logo" className="h-40"/>
           </Typography>
         </Link>
-        <div className="hidden lg:block">{navList}</div>
-        <div className="hidden gap-2 lg:flex">
-          <a
-            href="https://www.material-tailwind.com/blocks?ref=mtkr"
-            target="_blank"
-          >
-            {/*
-            <Button variant="text" size="sm" color="white" fullWidth>
-              pro version
-            </Button>
-          */}
-          </a>
-          {React.cloneElement(action, {
-            className: "hidden lg:inline-block",
-          })}
-        </div>
+
+        <div className="hidden lg:block">{navListDesk}</div>
+
         <IconButton
           variant="text"
           size="sm"
@@ -102,27 +167,29 @@ export function Navbar({ brandName, routes, action }) {
           )}
         </IconButton>
       </div>
-      <MobileNav
-        className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
-        open={openNav}
-      >
-        <div className="container mx-auto">
+      {openNav && (
+        <div className="mt-4 bg-gray-100 rounded-lg p-4">
           {navList}
-          <a
-            href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
-            target="_blank"
-            className="mb-2 block hover:text-dark-blue"
-          >
-            <Button variant="text" size="sm" fullWidth>
-              pro version
-            </Button>
-          </a>
-          {React.cloneElement(action, {
-            className: "w-full block",
-          })}
         </div>
-      </MobileNav>
-    </MTNavbar>
+      )}
+      {/*
+        <MobileNav
+          className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
+          open={openNav}
+        >
+          <div className="container mx-auto">
+            {navList}
+            <a
+              href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
+              target="_blank"
+              className="mb-2 block hover:text-dark-blue"
+            >
+            </a>
+           
+          </div>
+        </MobileNav>
+      */}
+    </div>
   );
 }
 

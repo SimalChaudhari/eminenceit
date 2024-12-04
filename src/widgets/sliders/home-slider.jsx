@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import HomeSlider from "./HomeSlider.jsx"; 
+import HomeSlider from "./HomeSlider.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -44,12 +44,12 @@ const sliderData = [
 
 const SliderComponent = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 2,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024, // For devices with max-width of 1024px
@@ -69,10 +69,12 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className="my-8">
+    <div className="py-8"
+      data-aos="fade-down"
+    >
       <Slider {...settings}>
         {sliderData.map((item, index) => (
-          <div key={index} className="px-4">
+          <div key={index} className="px-4 py-10">
             <HomeSlider
               color={item.color}
               icon={item.icon}

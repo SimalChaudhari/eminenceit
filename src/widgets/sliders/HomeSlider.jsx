@@ -20,7 +20,7 @@ export function HomeSlider({ color, icon, title, description }) {
                     >
                         {icon}
                     </IconButton>
-                    <Typography variant="h5" className="mb-4" color="blue-gray">
+                    <Typography variant="h5" className="mb-4 text-dark-blue" color="blue-gray">
                         {title}
                     </Typography>
                 </div>

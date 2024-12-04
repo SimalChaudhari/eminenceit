@@ -17,7 +17,7 @@ export const routes = [
     element: <OurServices />,
   },
   {
-    name: "our USP",
+    name: "Why Choose Us?",
     path: "/oup-usp",
     element: <OurUSP />,
   },

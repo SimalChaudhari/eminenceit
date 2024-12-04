@@ -15,7 +15,7 @@ export function TeamCard({ img, name, position, socials }) {
         {name}
       </Typography>
       {position && (
-        <Typography className="font-bold text-blue-gray-500">
+        <Typography className="font-bold text-dark-blue">
           {position}
         </Typography>
       )}

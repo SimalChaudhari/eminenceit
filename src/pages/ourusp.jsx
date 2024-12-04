@@ -12,18 +12,19 @@ export function OurUSP() {
     return (
         <div className="overflow-x-hidden">
             <section className="relative block h-[50vh]">
-                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-105" />
+                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/BulbBG.jpg')] bg-cover bg-center scale-105" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center">
-                        <div className="ml-auto mr-auto  px-4 text-center lg:w-8/12 mt-44">
-                            <Typography
+                        <div className="ml-auto mr-auto  px-4 text-center lg:w-8/12 mt-32">
+                            <h1
                                 variant="h1"
                                 color="white"
-                                className="mb-6 font-black lg:text-5xl text-3xl"
+                                className="mb-6 font-black lg:text-7xl md:text-6xl  text-5xl text-white "
+                                data-aos="fade-down"
                             >
-                                Our USP/why choose Us?
-                            </Typography>
+                                Why Choose Us?
+                            </h1>
 
 
                         </div>
@@ -34,9 +35,11 @@ export function OurUSP() {
             {/* Main Content */}
             <section className="relative bg-white pt-16">
                 <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
-                    <div className="container mx-auto">
+                    <div className="container mx-auto"
+                        data-aos="fade-down"
+                    >
                         {/* Tally Training Section */}
-                        <div className="relative bg-cover bg-center h-52 lg:mt-20 mt-10 rounded-lg overflow-hidden shadow-lg bg-[url('/img/background-2.jpg')]">
+                        <div className="relative bg-cover bg-center h-52 lg:mt-20 mt-10 rounded-lg overflow-hidden shadow-lg bg-[url('/img/BannerBg.jpg')]">
                             <div className="absolute inset-0 bg-black/50"></div>
                             <div className="relative z-10 flex items-center justify-center h-full">
                                 <h2 className="text-white lg:text-3xl text-2xl text-center font-bold uppercase tracking-wide">
@@ -45,7 +48,9 @@ export function OurUSP() {
                             </div>
                         </div>
 
-                        <div className="py-10">
+                        <div className="py-10"
+                            data-aos="fade-down"
+                        >
                             <div className="flex w-full flex-col items-start">
                                 <Typography className="font-normal text-blue-gray-500">
                                     “With Microsoft, empower your businesses to achieve more.
@@ -77,9 +82,11 @@ export function OurUSP() {
             {/* Main Content */}
             <section className="relative bg-white pt-16">
                 <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
-                    <div className="container mx-auto">
+                    <div className="container mx-auto"
+                        data-aos="fade-down"
+                    >
                         {/* Tally Training Section */}
-                        <div className="relative bg-cover bg-center h-52 lg:mt-20 mt-10 rounded-lg overflow-hidden shadow-lg bg-[url('/img/background-2.jpg')]">
+                        <div className="relative bg-cover bg-center h-52 lg:mt-20 mt-10 rounded-lg overflow-hidden shadow-lg bg-[url('/img/BuldingBG.jpg')]">
                             <div className="absolute inset-0 bg-black/50"></div>
                             <div className="relative z-10 flex items-center justify-center h-full">
                                 <h2 className="text-white lg:text-3xl text-2xl text-center font-bold uppercase tracking-wide">
@@ -88,7 +95,9 @@ export function OurUSP() {
                             </div>
                         </div>
 
-                        <div className="py-10">
+                        <div className="py-10"
+                            data-aos="fade-down"
+                        >
                             <div className="flex w-full flex-col items-start">
                                 <Typography className="font-normal text-blue-gray-500">
                                     We, Eminence IT Services with a rich and diverse experience in developing customized Tally solutions and other business solution tools for all businesses across sectors.
@@ -103,19 +112,20 @@ export function OurUSP() {
                 </div>
             </section>
 
-            {/* Main Content */}
-            <section className="relative bg-white pt-24">
-                <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
-                    <div className="container mx-auto">
 
-                        <div className="flex flex-wrap  container justify-between">
-                            {/* Our Expertise Section */}
-                            <div className="py-10">
+            {/* Main Content */}
+            <section className="relative bg-white py-24">
+                <div className="container mx-auto" data-aos="fade-down">
+                    <div className="flex flex-wrap -mt-20 justify-between gap-1">
+                        {/* Our Expertise Section */}
+                        <div className="w-full lg:w-[30%]">
+                            <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)]">
                                 <Typography
                                     className="font-bold text-blue-gray-900 mb-4 lg:text-3xl text-2xl"
                                 >
                                     Our Expertise
                                 </Typography>
+                                <hr className="lg:mb-5" />
                                 <ul className="list-disc pl-5 space-y-2 text-blue-gray-600">
                                     <li>Microsoft Dynamics 365</li>
                                     <li>Tally Customization</li>
@@ -124,14 +134,17 @@ export function OurUSP() {
                                     <li>Advanced Payroll Software</li>
                                 </ul>
                             </div>
+                        </div>
 
-                            {/* Technical Exposures Section */}
-                            <div className="py-10">
+                        {/* Technical Exposures Section */}
+                        <div className="w-full lg:w-[30%]">
+                            <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)]">
                                 <Typography
                                     className="font-bold text-blue-gray-900 mb-4 lg:text-3xl text-2xl"
                                 >
                                     Our Technical Exposures
                                 </Typography>
+                                <hr className="lg:mb-5" />
                                 <ul className="list-decimal pl-5 space-y-2 text-blue-gray-600">
                                     <li>Tally Sales and Service</li>
                                     <li>Development of Customized Solutions</li>
@@ -143,14 +156,17 @@ export function OurUSP() {
                                     <li>Digital Signatures</li>
                                 </ul>
                             </div>
+                        </div>
 
-                            {/* Achievements / Awards Section */}
-                            <div className="py-10">
+                        {/* Achievements / Awards Section */}
+                        <div className="w-full lg:w-[30%]">
+                            <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.4)]">
                                 <Typography
                                     className="font-bold text-blue-gray-900 mb-4 lg:text-3xl text-2xl"
                                 >
                                     Achievements / Awards
                                 </Typography>
+                                <hr className="lg:mb-5" />
                                 <ul className="list-disc pl-5 space-y-2 text-blue-gray-600">
                                     <li>15+ Years Expertise in the Same Domain</li>
                                     <li>800+ Happy Clients</li>
@@ -159,7 +175,6 @@ export function OurUSP() {
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
