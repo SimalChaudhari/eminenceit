@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
 import routes from "@/routes";
-// import { PrivacyPolicy } from "./pages";
+import { PrivacyPolicy } from "./pages";
 
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
       <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
       */}
       {!(pathname == '/sign-in' || pathname == '/sign-up') && (
-        <div className=" px-4">
-          <Navbar routes={routes} />
+        <div >
+          <Navbar routes={routes} className=" px-4" />
         </div>
       )
       }
@@ -24,8 +24,8 @@ function App() {
             element && <Route key={key} exact path={path} element={element} />
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
+        <Route path="/privacy-policys" element={<PrivacyPolicy />} />
         {/*
-          <Route path="/privacy-policys" element={<PrivacyPolicy />} />
           */}
       </Routes>
     </div>

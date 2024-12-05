@@ -11,11 +11,11 @@ export function Footer({ title, description, socials, menus, copyright }) {
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 md:w-2/6">
             <Typography variant="h4" className="mb-4" color="blue-gray">
-            {/*
+              {/*
               {title}
               */}
-              
-             <img src={FT_Logo} alt="FT_Logo" className="h-36"/>
+
+              <img src={FT_Logo} alt="FT_Logo" className="h-24" />
             </Typography>
             {/*
               <Typography className="font-normal text-blue-gray-500 lg:w-2/3">
@@ -30,10 +30,10 @@ export function Footer({ title, description, socials, menus, copyright }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IconButton color="white" className="rounded-full shadow-none bg-transparent">
-                    <Typography color={color}>
+                  <IconButton color="white" className="rounded-full shadow-none bg-transparent text-xl text-white  hover:shadow-sky-blue hover:border-sky-blue">
+                    <p color={color}>
                       <i className={`fa-brands fa-${name}`} />
-                    </Typography>
+                    </p>
                   </IconButton>
                 </a>
               ))}
@@ -56,7 +56,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                         target="_blank"
                         rel="noreferrer"
                         variant="small"
-                        className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg"
+                        className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize"
                       >
                         {item.name}
                       </Typography>
@@ -91,7 +91,9 @@ Footer.defaultProps = {
     {
       color: "white",
       name: "whatsapp",
-      path: "https://www.twitter.com/creativetim",
+      // path: "https://www.twitter.com/creativetim",
+      "path": "https://wa.me/9483627307 ",
+      // path: "https://wa.me/9742136985",
     },
     {
       color: "white",
@@ -113,7 +115,8 @@ Footer.defaultProps = {
     {
       name: "About Us",
       items: [
-        { name: "Ourhistory", path: "https://www.creative-tim.com/presentation" },
+        { name: "Our history", path: "https://www.creative-tim.com/presentation" },
+        { name: "who we are ", path: "https://www.creative-tim.com/blog" },
         { name: "Our Values", path: "https://www.creative-tim.com/blog" },
         { name: "Our team", path: "https://www.creative-tim.com/blog" },
       ],
@@ -122,8 +125,8 @@ Footer.defaultProps = {
       name: "solutions",
       items: [
         { name: "hospitals", path: "https://www.creative-tim.com/presentation" },
-        { name: "who we are  Schools & Instituions", path: "https://www.creative-tim.com/blog" },
-        { name: "Hotels &Restaurants", path: "https://www.creative-tim.com/blog" },
+        { name: "Schools & Institutions", path: "https://www.creative-tim.com/blog" },
+        { name: "Hotels & Restaurants", path: "https://www.creative-tim.com/blog" },
         { name: "Manufacturing", path: "https://www.creative-tim.com/blog" },
       ],
     },
@@ -131,7 +134,7 @@ Footer.defaultProps = {
       name: "Partners",
       items: [
         { name: "Tally", path: "https://www.creative-tim.com/presentation" },
-        { name: "Microsoftdynamics", path: "https://www.creative-tim.com/blog" },
+        { name: "Microsoft dynamics", path: "https://www.creative-tim.com/blog" },
         { name: "Credflow", path: "https://www.creative-tim.com/blog" },
         { name: "Google Partner", path: "https://www.creative-tim.com/blog" },
       ],
@@ -140,7 +143,7 @@ Footer.defaultProps = {
       name: "Services",
       items: [
         {
-          name: "TallyDevelopment",
+          name: "Tally Development",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
         },
         {
@@ -160,7 +163,7 @@ Footer.defaultProps = {
   ],
   copyright: (
     <p className="text-white transition-colors hover:text-blue-500 cursor-pointer">
-    copyright © eminenceitservices, 2024 all rights reserved.
+      copyright © eminenceitservices, 2024 all rights reserved.
     </p>
   ),
 };

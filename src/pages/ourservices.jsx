@@ -12,7 +12,7 @@ export function OurServices() {
     return (
         <div className="overflow-x-hidden">
             <section className="relative block h-[50vh]">
-                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/KeyBrdBG.jpg')] bg-cover bg-center scale-105" />
+                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/Services_graphic.jpg')] bg-cover bg-center scale-105" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center">
@@ -45,7 +45,7 @@ export function OurServices() {
                             {/* Content inside */}
                             <div className="relative z-10 flex items-center justify-center h-full">
                                 <h2 className="text-white lg:text-5xl md:text-4xl  text-3xl text-center font-bold uppercase tracking-wide">
-                                    TALLY TRAINING :
+                                    TALLY TRAINING
                                 </h2>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ export function OurServices() {
                         {/* Content inside */}
                         <div className="relative z-10 flex items-center justify-center h-full">
                             <h2 className="text-white lg:text-5xl md:text-4xl  text-3xl text-center font-bold uppercase tracking-wide">
-                                Website Development :
+                                Website Development
                             </h2>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ export function OurServices() {
                         {/* Content inside */}
                         <div className="relative z-10 flex items-center justify-center h-full">
                             <h2 className="text-white lg:text-5xl md:text-4xl  text-3xl text-center font-bold uppercase tracking-wide">
-                                Web App Development :
+                                Web App Development
                             </h2>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ export function OurServices() {
                         {/* Content inside */}
                         <div className="relative z-10 flex items-center justify-center h-full">
                             <h2 className="text-white lg:text-5xl md:text-4xl  text-3xl text-center font-bold uppercase tracking-wide">
-                                Hybrid Mobile App Development :
+                                Hybrid Mobile App Development
                             </h2>
                         </div>
                     </div>
@@ -180,7 +180,7 @@ export function OurServices() {
                         {/* Content inside */}
                         <div className="relative z-10 flex items-center justify-center h-full">
                             <h2 className="text-white lg:text-5xl md:text-4xl  text-3xl text-center font-bold uppercase tracking-wide">
-                                Native Mobile App Development :
+                                Native Mobile App Development
                             </h2>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ export function OurServices() {
                         {/* Content inside */}
                         <div className="relative z-10 flex items-center justify-center h-full">
                             <h2 className="text-white lg:text-5xl md:text-4xl  text-3xl text-center font-bold uppercase tracking-wide">
-                                Tally Development (TDL) :
+                                Tally Development (TDL)
                             </h2>
                         </div>
                     </div>

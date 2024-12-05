@@ -12,26 +12,31 @@ const clientReviews = [
     name: "Glowcasa Lights",
     review: "Excellent service and top-notch quality products.",
     image: imageUrl, // Replace with actual image paths
+    rating: 5,
   },
   {
     name: "Christ College",
     review: "A remarkable experience with seamless collaboration.",
     image: imageUrl,
+    rating: 4,
   },
   {
     name: "Supple Pack",
     review: "Outstanding support and innovative solutions.",
     image: imageUrl,
+    rating: 2,
   },
   {
     name: "Chubbs Dubai",
     review: "Highly professional team delivering great results.",
     image: imageUrl,
+    rating: 4,
   },
   {
     name: "Coffee Board",
     review: "They truly understand our needs and deliver excellence.",
     image: imageUrl,
+    rating: 3,
   },
 ];
 
@@ -107,7 +112,7 @@ const ReviewsCarousel = () => {
       <Slider {...settings}>
         {clientReviews.map((item, index) => (
           <div key={index} className="px-4">
-            <ReviewSlider name={item.name} image={item.image} review={item.review} />
+            <ReviewSlider name={item.name} image={item.image} review={item.review} rating={item.rating} />
           </div>
         ))}
       </Slider>

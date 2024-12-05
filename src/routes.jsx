@@ -26,11 +26,11 @@ export const routes = [
     path: "/contct-us",
     element: <ContactUs />,
   },
-  {
-    name: "Privacy Policy",
-    path: "/privacy-policy",
-    element: <PrivacyPolicy />,
-  },
+  // {
+  //   name: "Privacy Policy",
+  //   path: "/privacy-policy",
+  //   element: <PrivacyPolicy />,
+  // },
   // {
   //   name: "Sign In",
   //   path: "/sign-in",

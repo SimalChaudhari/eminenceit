@@ -143,9 +143,9 @@ export function ContactUs() {
                             <div className="py-10 px-10">
                                 <Typography
                                     variant="h4"
-                                    className="font-bold text-blue-gray-900 mb-6 text-center"
+                                    className="font-bold text-blue-gray-900 mb-6 text-center capitalize"
                                 >
-                                    Get in Touch
+                                Get in touch with us and let us take your business to next level
                                 </Typography>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     {successMessage && (

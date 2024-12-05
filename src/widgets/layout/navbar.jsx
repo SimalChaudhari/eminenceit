@@ -77,8 +77,8 @@ export function Navbar({ brandName, routes, action }) {
           </MenuHandler>
           <MenuList className="w-auto">
             {dropdownRoutes.map(({ name, path, href, target }) => (
-              <Link key={name} className="flex py-2 hover:bg-gray-100 px-2 rounded-lg" 
-              to={path}
+              <Link key={name} className="flex py-2 hover:bg-gray-100 px-2 rounded-lg"
+                to={path}
               >
                 {href ? (
                   <a
@@ -106,7 +106,7 @@ export function Navbar({ brandName, routes, action }) {
   );
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black">
       {routes.map(({ name, path, href, target }) => (
         <Typography
           key={name}
@@ -128,44 +128,46 @@ export function Navbar({ brandName, routes, action }) {
             <Link
               to={path}
               target={target}
-              className="flex items-center gap-1 p-1 font-bold hover:text-dark-blue"
+              className="flex items-center gap-1 p-1 font-bold text-black hover:text-dark-blue lg:text-lg"
             >
               {name}
             </Link>
           )}
         </Typography>
       ))}
-    
+
     </ul>
   );
 
   return (
-    <div color="transparent" className="lg:p-3 py-3">
-      <div className=" flex items-center justify-between lg:gap-32 md:gap-2 gap-0 text-black">
-      <div className="hidden lg:block w-2/12"></div>
+    <div color="transparent" className="lg:p-3 py-3 bg-white text-white px-0">
+      <div className=" flex items-center justify-between lg:gap-32 md:gap-2 gap-0 ">
+        {/*
+        <div className="hidden lg:block w-2/12"></div>
+        */}
         <Link to="/">
           <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
             {/*
             {brandName}
             <img src={Logo} alt="Logo" className="h-14" />
             */}
-            <img src={FT_Logo} alt="Logo" className="h-40"/>
+            <img src={FT_Logo} alt="Logo" className="h-40" />
           </Typography>
         </Link>
 
-        <div className="hidden lg:block">{navListDesk}</div>
+        <div className="hidden lg:block">{navList}</div>
 
         <IconButton
           variant="text"
           size="sm"
-          color="white"
-          className="ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          color="black"
+          className="ml-auto text-inherit  focus:bg-transparent active:bg-transparent lg:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+            <XMarkIcon strokeWidth={2} color="black" className="h-6 w-6" />
           ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+            <Bars3Icon strokeWidth={2} color="black" className="h-6 w-6" />
           )}
         </IconButton>
       </div>

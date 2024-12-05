@@ -23,7 +23,7 @@ export function OurUSP() {
                                 className="mb-6 font-black lg:text-7xl md:text-6xl  text-5xl text-white "
                                 data-aos="fade-down"
                             >
-                                Why Choose Us?
+                                Why Us?
                             </h1>
 
 
@@ -42,8 +42,26 @@ export function OurUSP() {
                         <div className="relative bg-cover bg-center h-52 lg:mt-20 mt-10 rounded-lg overflow-hidden shadow-lg bg-[url('/img/BannerBg.jpg')]">
                             <div className="absolute inset-0 bg-black/50"></div>
                             <div className="relative z-10 flex items-center justify-center h-full">
+
                                 <h2 className="text-white lg:text-3xl text-2xl text-center font-bold uppercase tracking-wide">
-                                    Microsoft Dynamics365:
+                                    Our Expertize
+                                </h2>
+                                <br />
+                                {/*
+                            <h2 className="text-white lg:text-3xl text-2xl text-center font-bold uppercase tracking-wide">
+                                Microsoft Dynamics365
+                            </h2>
+                            */}
+                            </div>
+                        </div>
+
+
+                        <div className="relative bg-cover bg-center h-52 lg:mt-20 mt-10 rounded-lg overflow-hidden shadow-lg bg-[url('/img/BannerBg.jpg')]">
+                            <div className="absolute inset-0 bg-black/50"></div>
+                            <div className="relative z-10 flex items-center justify-center h-full">
+
+                                <h2 className="text-white lg:text-3xl text-2xl text-center font-bold uppercase tracking-wide">
+                                    Microsoft Dynamics365
                                 </h2>
                             </div>
                         </div>
