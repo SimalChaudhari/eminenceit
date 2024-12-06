@@ -10,7 +10,7 @@ const imageUrl = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAACUCAMAAAAN
 const clientReviews = [
   {
     name: "Glowcasa Lights",
-    review: "Excellent service and top-notch quality products.",
+    review: "Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.",
     image: imageUrl, // Replace with actual image paths
     rating: 5,
   },
@@ -22,19 +22,19 @@ const clientReviews = [
   },
   {
     name: "Supple Pack",
-    review: "Outstanding support and innovative solutions.",
+    review: "Outstanding support and innovative solutions.Outstanding support and innovative solutions.Outstanding support and innovative solutions.Outstanding support and innovative solutions.Outstanding support and innovative solutions.Outstanding support and innovative solutions.Outstanding support and innovative solutions.",
     image: imageUrl,
     rating: 2,
   },
   {
     name: "Chubbs Dubai",
-    review: "Highly professional team delivering great results.",
+    review: "Highly professional team delivering great results.Highly professional team delivering great results.Highly professional team delivering great results.Highly professional team delivering great results.Highly professional team delivering great results.",
     image: imageUrl,
     rating: 4,
   },
   {
     name: "Coffee Board",
-    review: "They truly understand our needs and deliver excellence.",
+    review: "They truly understand our needs and deliver excellence.They truly understand our needs and deliver excellence.They truly understand our needs and deliver excellence.",
     image: imageUrl,
     rating: 3,
   },
@@ -108,7 +108,7 @@ const ReviewsCarousel = () => {
     <div className="mt-8" 
     data-aos="fade-down"
     >
-      <h2 className=" text-2xl font-bold mb-6 text-dark-blue uppercase px-4">Our Clients with Reviews</h2>
+      <h2 className=" text-2xl font-bold mb-6 text-dark-blue uppercase px-4 md:text-4xl text-2xl">Our Clients with Reviews</h2>
       <Slider {...settings}>
         {clientReviews.map((item, index) => (
           <div key={index} className="px-4">

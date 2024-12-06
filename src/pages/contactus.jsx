@@ -3,6 +3,7 @@ import { Typography, Button, Input, Select, Option, Textarea } from "@material-t
 import { Footer } from "@/widgets/layout";
 import axios from "axios";
 import Contact_Map from "../assets/images/contactus_page.jpg"
+import image_Contect from "../assets/images/image_Contect.webp"
 
 export function ContactUs() {
 
@@ -84,51 +85,41 @@ export function ContactUs() {
 
     return (
         <div className="overflow-x-hidden">
-            <section className="relative block h-[50vh]">
-                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/WebDevAppBG.jpg')] bg-cover bg-center scale-105" />
-                <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-                <div className="max-w-8xl container relative mx-auto">
-                    <div className="flex flex-wrap items-center">
-                        <div className="ml-auto mr-auto px-4 text-center lg:w-8/12 mt-48">
-                            <h1
-                            variant="h1"
-                            color="white"
-                            className="mb-6 font-black lg:text-7xl md:text-6xl  text-5xl text-white "
-                            data-aos="fade-down"
-                            >
-                                Contact Us
-                            </h1>
+
+
+            <section className="relative bg-white border-y-2 py-10">
+                <div className="container mx-auto px-4 ">
+                    <div className="md:flex">
+
+                        {/* Left side text or content */}
+                        <div className="flex flex-col justify-center md:w-1/2 w-full">
+                            <h2 className="text-3xl md:text-6xl font-bold text-dark-blue mb-4 uppercase">Contact Us</h2>
+                            <p className="md:text-lg text-gray-600 md:mt-6">
+                                Let’s collaborate and create something amazing together!
+                                Reach out to us and take your business to the next level.
+                            </p>
+
+                        </div>
+
+                        {/* Right side image or content */}
+                        <div className="flex justify-center items-center md:w-1/2 w-full">
+                            <img
+                                src={image_Contect}
+                                alt="Your Image"
+                                className="w-full h-full "
+                            />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Main Content */}
-            <section className="relative bg-white pt-16">
+            <section className="relative bg-white pt-16 hidden">
                 <div className="container mx-auto px-4">
-                    {/* Google Maps Section */}
                     <div className="mb-10">
-                    {/*
-                        <Typography
-                            variant="h3"
-                            className="font-bold text-blue-gray-900 mb-4 text-center"
-                        >
-                            Our Location
-                        </Typography>
-                    */}
+                       
                         <div className="rounded-lg overflow-hidden shadow-lg">
-                        <img src={Contact_Map} alt="Contact_Map" />
-                        {/*
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=YourGoogleMapEmbedCode"
-                                width="100%"
-                                height="400"
-                                allowFullScreen
-                                loading="lazy"
-                                className="border-0 w-full h-64"
-                                title="Google Map"
-                            ></iframe>
-                            */}
+                            <img src={Contact_Map} alt="Contact_Map" />
                         </div>
                     </div>
 
@@ -140,12 +131,12 @@ export function ContactUs() {
                     <section className="relative bg-white py-16">
                         <div className="container mx-auto px-4 bg-gray-50  rounded-lg shadow-lg">
                             {/* Contact Form */}
-                            <div className="py-10 px-10">
+                            <div className="py-10 md:px-10">
                                 <Typography
                                     variant="h4"
-                                    className="font-bold text-blue-gray-900 mb-6 text-center capitalize"
+                                    className="font-bold text-dark-blue mb-6 md:text-center capitalize md:text-3xl text-xl text-left"
                                 >
-                                Get in touch with us and let us take your business to next level
+                                    Get in touch with us and let us take your business to next level
                                 </Typography>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     {successMessage && (
@@ -290,7 +281,8 @@ export function ContactUs() {
                                     </div>
                                     <Button
                                         type="submit"
-                                        color="black"
+                                        className="px-8 py-3 bg-dark-blue text-white font-semibold text-lg rounded-lg hover:bg-sky-blue transition duration-300"
+
                                         disabled={loading}
                                     >
                                         {loading ? "Submitting..." : "Submit"}

@@ -101,7 +101,7 @@ const PartnersSliderComponent = () => {
     >
       <Typography
         variant="h4"
-        className="font-bold text-dark-blue mb-6 text-left px-4"
+        className="font-bold text-dark-blue mb-6 text-left px-4 md:text-4xl text-2xl"
       >
       OUR PARTNERS
       </Typography>

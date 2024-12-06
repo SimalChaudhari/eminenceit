@@ -11,6 +11,7 @@ import PartnersSliderComponent from "@/widgets/sliders/partners-slider";
 import ReviewsCarousel from "@/widgets/sliders/review-slider";
 import aboutBannerImage from '../assets/images/about_banner.jpg';
 import OurMissionImage from '../assets/images/OurMissionIMG.webp';
+import Develop_graphic from '../assets/images/Develop_graphic.jpg';
 
 export function Home() {
   return (
@@ -71,9 +72,9 @@ export function Home() {
         data-aos="fade-down"
         style={{
           backgroundImage: `url(${aboutBannerImage})`,  // Using imported image
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          // backgroundSize: 'cover',
+          // backgroundPosition: 'center',
+          // backgroundRepeat: 'no-repeat',
           height: '400px',
         }}
       >
@@ -83,7 +84,7 @@ export function Home() {
             <Typography
               variant="h2"
               color="blue-gray"
-              className="mb-3 mt-2 font-bold text-black lg:text-5xl"
+              className="mb-3 mt-2 font-bold text-custome-blue lg:text-5xl"
             >
               Our Mission
             </Typography>
@@ -101,7 +102,7 @@ export function Home() {
               <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
                 {/* Left side image */}
                 <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 ">
-                  <img src={OurMissionImage} alt="OurMissionImage" className="w-full h-full object-cover" />
+                  <img src={Develop_graphic} alt="Develop_graphic" className="w-full h-full object-cover" />
                 </CardBody>
 
                 {/* Right side text */}

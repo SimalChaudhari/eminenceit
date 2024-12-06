@@ -7,7 +7,7 @@ export function PrivacyPolicy() {
         <div className="overflow-x-hidden">
             {/* Hero Section */}
             <section className="relative block h-[50vh]">
-                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/WebDevAppBG.jpg')] bg-cover bg-center scale-x-105 scale-y-100" />
+                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/cyber_security.jpg')] bg-cover bg-center scale-x-105 scale-y-100" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center">

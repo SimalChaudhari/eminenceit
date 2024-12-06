@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Typography, IconButton } from "@material-tailwind/react";
 import FT_Logo from "../../assets/Logo/FT_LOGO_EMINENCE_TRANSPARENT.png"
+import { Link } from "react-router-dom";
 
 const year = new Date().getFullYear();
 
@@ -17,6 +18,23 @@ export function Footer({ title, description, socials, menus, copyright }) {
 
               <img src={FT_Logo} alt="FT_Logo" className="h-24" />
             </Typography>
+            <div className="text-white text-left">
+              <div className="flex flex-col  space-y-3">
+                <div className="md:flex md:space-x-2">
+                  <p className="font-semibold">Company Name :</p> <p> EMINENCE IT SERVICES</p>
+                </div>
+                <div className="md:flex md:space-x-2">
+                  <p className="font-semibold">Address&nbsp;:</p> <p>  #174, 2ND Floor, 3rd Cross, Balaji Layout Mallathahalli Main Road, Bengaluru – 560056</p>
+                </div>
+                <div className="md:flex md:space-x-2">
+                  <p className="font-semibold">Contact :</p> <p> 9483627307 / 9742136985</p>
+                </div>
+                <div className="md:flex md:space-x-2">
+                  <p className="font-semibold">Email ID :</p> <p> info@eminenceit.com</p>
+                </div>
+              </div>
+
+            </div>
             {/*
               <Typography className="font-normal text-blue-gray-500 lg:w-2/3">
                 {description}
@@ -52,6 +70,27 @@ export function Footer({ title, description, socials, menus, copyright }) {
                 <ul className="mt-3">
                   {items.map((item) => (
                     <li key={item.name}>
+
+                      {item.path.startsWith('/') ? (
+                        <Link to={item.path}
+                          rel="noreferrer"
+                          variant="small"
+                          className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize"
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <Typography href={item.path}
+                          target="_blank"
+                          rel="noreferrer"
+                          variant="small"
+                          className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize"
+                        >
+                          {item.name}
+                        </Typography>
+                      )}
+
+                      {/*
                       <Typography
                         target="_blank"
                         rel="noreferrer"
@@ -60,6 +99,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                       >
                         {item.name}
                       </Typography>
+                      */}
                     </li>
                   ))}
                 </ul>
@@ -119,6 +159,7 @@ Footer.defaultProps = {
         { name: "who we are ", path: "https://www.creative-tim.com/blog" },
         { name: "Our Values", path: "https://www.creative-tim.com/blog" },
         { name: "Our team", path: "https://www.creative-tim.com/blog" },
+        { name: "privacy policys", path: "/privacy-policys" },
       ],
     },
     {

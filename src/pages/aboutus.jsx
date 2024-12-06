@@ -24,7 +24,7 @@ export function AboutUs() {
         if (section) {
             // Determine offset based on screen width
             const offset = window.innerWidth >= 1024 ? 150 : 200; // 150px for large screens, 200px for small screens
-            
+
             // Scroll to the section with the calculated offset
             window.scrollTo({
                 top: section.offsetTop - offset,
@@ -33,8 +33,8 @@ export function AboutUs() {
         }
         setIsOpen(false); // Close dropdown after selection
     };
-    
-    
+
+
 
 
     return (
@@ -142,8 +142,14 @@ export function AboutUs() {
                             data-aos="fade-down"
                         >
                             <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-                                <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
+                                <Card className="rounded-lg lg:flex lg:flex-row-reverse shadow-none">
                                     {/* Left side image */}
+                                    <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 lg:border-l-2 lg:mt-0 mt-5">
+                                        <img src={Develop_graphic} alt="Develop_graphic" className="w-full h-full object-cover" />
+                                    </CardBody>
+
+
+                                    {/* Right side text */}
                                     <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
                                         <div className=" text-left mb-3" >
                                             <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide">
@@ -156,12 +162,6 @@ export function AboutUs() {
                                             <br />
                                             With 15+ years of experience in the industry, we have established ourselves as a trusted partner for businesses seeking to elevate their digital presence and improve their operations through technology
                                         </Typography>
-                                    </CardBody>
-
-
-                                    {/* Right side text */}
-                                    <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 lg:border-l-2 lg:mt-0 mt-5">
-                                        <img src={Develop_graphic} alt="Develop_graphic" className="w-full h-full object-cover" />
                                     </CardBody>
                                 </Card>
                             </div>

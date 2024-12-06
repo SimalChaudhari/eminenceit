@@ -151,7 +151,7 @@ export function Navbar({ brandName, routes, action }) {
             {brandName}
             <img src={Logo} alt="Logo" className="h-14" />
             */}
-            <img src={FT_Logo} alt="Logo" className="h-40" />
+            <img src={FT_Logo} alt="Logo" className="md:h-40 h-20" />
           </Typography>
         </Link>
 

@@ -9,6 +9,7 @@ module.exports = withMT({
         "dark-blue": "#006FB8",
         "sky-blue": "#00BFEC",
         "custome-blue": "#000435",
+        "custome-brown": "#1F1F1F",
       },
     },
   },

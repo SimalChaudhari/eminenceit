@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Card, CardBody, Typography } from "@material-tailwind/react";
+import { Card, CardBody, Tooltip, Typography } from "@material-tailwind/react";
 import ReactStars from "react-stars";
 
 export function ReviewSlider({ image, name, review, rating }) {
@@ -14,7 +14,7 @@ export function ReviewSlider({ image, name, review, rating }) {
             className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
           />
         */}
-        <ReactStars
+          <ReactStars
             count={5}
             value={rating}
             size={24}
@@ -22,9 +22,11 @@ export function ReviewSlider({ image, name, review, rating }) {
             edit={false}
           />
         </div>
-        <Typography className="font-normal text-blue-gray-600 cursor-pointer">
-          {review}
-        </Typography>
+        <Tooltip content={review} placement="bottom" className="w-72 bg-gray-700">
+          <Typography className="font-normal text-blue-gray-600 cursor-pointer">
+            {review.length > 260 ? review.substring(0, 260) + '...' : review}
+          </Typography>
+        </Tooltip>
         <Typography variant="h5" className="mb-2 text-dark-blue" color="blue-gray">
           {name}
         </Typography>
