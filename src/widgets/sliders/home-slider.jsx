@@ -69,7 +69,8 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className="py-8"
+    <div
+      className="py-8"
       data-aos="fade-down"
     >
       <Slider {...settings}>
@@ -80,6 +81,7 @@ const SliderComponent = () => {
               icon={item.icon}
               title={item.title}
               description={item.description}
+              isEven={index % 2 === 0} // Pass whether the slide is even or odd
             />
           </div>
         ))}

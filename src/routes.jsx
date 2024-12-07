@@ -10,6 +10,10 @@ export const routes = [
     name: "about us",
     path: "/aboutus",
     element: <AboutUs />,
+    submenu: [
+      { name: "Web Development", path: "/services/web-development" },
+      { name: "Mobile Apps", path: "/services/mobile-apps" },
+    ],
   },
   {
     name: "our services",
@@ -17,12 +21,12 @@ export const routes = [
     element: <OurServices />,
   },
   {
-    name: "Why Choose Us?",
+    name: "Why Eminence?",
     path: "/oup-usp",
     element: <OurUSP />,
   },
   {
-    name: "CONTACT US",
+    name: "Contct Us",
     path: "/contct-us",
     element: <ContactUs />,
   },

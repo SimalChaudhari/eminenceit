@@ -17,7 +17,17 @@ import Logo from "../../assets/Logo/LOGO_IT_SERVICES_TRANSPARENT.png"
 import FT_Logo from "../../assets/Logo/FT_LOGO_EMINENCE_TRANSPARENT.png"
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-export function Navbar({ brandName, routes, action }) {
+export function Navbar({ brandName, routes, action,  }) {
+  
+  const [hoveredMenu, setHoveredMenu] = React.useState(null);
+
+  const handleMouseEnter = (menuName) => {
+    setHoveredMenu(menuName);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredMenu(null);
+  };
   const [openNav, setOpenNav] = React.useState(false);
   const [openMenu, setOpenMenu] = React.useState(false);
 
@@ -114,6 +124,9 @@ export function Navbar({ brandName, routes, action }) {
           variant="small"
           color="inherit"
           className="capitalize"
+
+          onMouseEnter={() => handleMouseEnter(name)}
+          onMouseLeave={handleMouseLeave}
         >
           {href ? (
             <a
@@ -128,10 +141,35 @@ export function Navbar({ brandName, routes, action }) {
             <Link
               to={path}
               target={target}
-              className="flex items-center gap-1 p-1 font-bold text-black hover:text-dark-blue lg:text-lg"
+              className="flex items-center gap-1 p-1 font-normal text-black hover:text-dark-blue lg:text-lg"
             >
               {name}
             </Link>
+          )}
+          {hoveredMenu === name && (
+            <ul className="absolute left-0 mt-2 w-48 rounded-lg bg-white shadow-lg z-10">
+              {routes?.submenu?.map((item) => (
+                <li key={item.name} className="px-4 py-2 hover:bg-gray-100">
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target={item.target}
+                      className="text-black font-bold hover:text-dark-blue"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      target={item.target}
+                      className="text-black font-bold hover:text-dark-blue"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
           )}
         </Typography>
       ))}
@@ -151,7 +189,7 @@ export function Navbar({ brandName, routes, action }) {
             {brandName}
             <img src={Logo} alt="Logo" className="h-14" />
             */}
-            <img src={FT_Logo} alt="Logo" className="md:h-40 h-20" />
+            <img src={FT_Logo} alt="Logo" className=" h-20" />
           </Typography>
         </Link>
 

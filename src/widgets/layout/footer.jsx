@@ -8,8 +8,8 @@ const year = new Date().getFullYear();
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
     <footer className="relative px-4 pt-8 pb-6 bg-custome-blue">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap pt-6 text-center lg:text-left">
+      <div className="md:container md:mx-auto">
+        <div className="flex flex-wrap pt-6 lg:text-left">
           <div className="w-full px-4 md:w-2/6">
             <Typography variant="h4" className="mb-4" color="blue-gray">
               {/*
@@ -40,7 +40,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                 {description}
               </Typography>
               */}
-            <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
+            <div className="md:mx-auto mt-6 mb-8 flex md:justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
                 <a
                   key={name}
@@ -57,7 +57,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 grid w-max lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-24 lg:mt-0  md:w-6/12">
+          <div className="md:mx-auto mt-12 grid w-max lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-24 lg:mt-0  md:w-6/12 md:px-0 px-4">
             {menus.map(({ name, items }) => (
               <div key={name} className="lg:w-[200px]">
                 <Typography
@@ -109,7 +109,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
         </div>
         <hr className="my-6 border-gray-300" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
-          <div className="mx-auto w-full px-4 text-center">
+          <div className="mx-auto w-full px-4 md:text-center">
             <Typography
               variant="small"
               className="font-normal text-blue-gray-500 text-lg"
