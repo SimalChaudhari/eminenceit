@@ -16,10 +16,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../assets/Logo/LOGO_IT_SERVICES_TRANSPARENT.png"
 import FT_Logo from "../../assets/Logo/FT_LOGO_EMINENCE_TRANSPARENT.png"
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { HashLink } from "react-router-hash-link";
 
-export function Navbar({ brandName, routes, action,  }) {
-  
+export function Navbar({ brandName, routes, action }) {
   const [hoveredMenu, setHoveredMenu] = React.useState(null);
+  const [openSubMenu, setOpenSubMenu] = React.useState(null);
 
   const handleMouseEnter = (menuName) => {
     setHoveredMenu(menuName);
@@ -30,6 +31,10 @@ export function Navbar({ brandName, routes, action,  }) {
   };
   const [openNav, setOpenNav] = React.useState(false);
   const [openMenu, setOpenMenu] = React.useState(false);
+
+  const handleSubMenuToggle = (menuName) => {
+    setOpenSubMenu(openSubMenu === menuName ? null : menuName); // Toggle submenu visibility
+  };
 
   React.useEffect(() => {
     window.addEventListener(
@@ -117,14 +122,13 @@ export function Navbar({ brandName, routes, action,  }) {
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black">
-      {routes.map(({ name, path, href, target }) => (
+      {routes.map(({ name, path, href, target, submenu }) => (
         <Typography
           key={name}
           as="li"
           variant="small"
           color="inherit"
-          className="capitalize"
-
+          className="capitalize relative font-Signika" // Add relative positioning for the parent
           onMouseEnter={() => handleMouseEnter(name)}
           onMouseLeave={handleMouseLeave}
         >
@@ -134,52 +138,45 @@ export function Navbar({ brandName, routes, action,  }) {
               target={target}
               className="flex items-center gap-1 p-1 font-bold"
             >
-
               {name}
             </a>
           ) : (
-            <Link
-              to={path}
-              target={target}
-              className="flex items-center gap-1 p-1 font-normal text-black hover:text-dark-blue lg:text-lg"
-            >
-              {name}
-            </Link>
-          )}
-          {hoveredMenu === name && (
-            <ul className="absolute left-0 mt-2 w-48 rounded-lg bg-white shadow-lg z-10">
-              {routes?.submenu?.map((item) => (
-                <li key={item.name} className="px-4 py-2 hover:bg-gray-100">
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      target={item.target}
-                      className="text-black font-bold hover:text-dark-blue"
-                    >
-                      {item.name}
-                    </a>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      target={item.target}
-                      className="text-black font-bold hover:text-dark-blue"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-center">
+              <Link
+                to={path}
+                target={target}
+                className="flex items-center gap-1 p-1 font-normal text-black hover:text-dark-blue lg:text-lg"
+              >
+                {name}
+              </Link>
+              {submenu && (
+                <MdKeyboardArrowDown className="text-xl text-black" />
+              )}
+              {hoveredMenu === name && submenu && (
+                <ul className="absolute top-full mt-0 left-0 w-auto rounded-lg bg-white shadow-lg z-10">
+                  {submenu.map((item) => (
+                    <li key={item.name} className="px-4 py-2 hover:bg-gray-100">
+                      <HashLink
+                        to={item.path}
+                        className="text-black font-semibold hover:text-dark-blue"
+                      >
+                        {item.name}
+                      </HashLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           )}
         </Typography>
       ))}
-
     </ul>
   );
 
+
   return (
     <div color="transparent" className="lg:p-3 py-3 bg-white text-white px-0">
-      <div className=" flex items-center justify-between lg:gap-32 md:gap-2 gap-0 ">
+      <div className=" flex items-center justify-between lg:gap-32 md:gap-2 gap-0 px-4">
         {/*
         <div className="hidden lg:block w-2/12"></div>
         */}

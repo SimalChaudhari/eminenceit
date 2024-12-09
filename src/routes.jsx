@@ -11,14 +11,23 @@ export const routes = [
     path: "/aboutus",
     element: <AboutUs />,
     submenu: [
-      { name: "Web Development", path: "/services/web-development" },
-      { name: "Mobile Apps", path: "/services/mobile-apps" },
+      { name: "OurHistory", path: "/aboutus#OurHistory" },
+      { name: "WhoWeAre", path: "/aboutus#WhoWeAre" },
+      { name: "OurValues", path: "/aboutus#OurValues" },
     ],
   },
   {
     name: "our services",
     path: "/our-services",
     element: <OurServices />,
+    submenu: [
+      { name: "TallyTraining", path: "/our-services#TallyTraining" },
+      { name: "WebsiteDevelopment", path: "/our-services#WebsiteDevelopment" },
+      { name: "WebApppDevelopment", path: "/our-services#WebApppDevelopment" },
+      { name: "HybridMobileAppDevelopment", path: "/our-services#HybridMobileAppDevelopment" },
+      { name: "NativeAppDevelopment", path: "/our-services#NativeAppDevelopment" },
+      { name: "TallyDevelopment(TDL)", path: "/our-services#TallyDevelopment(TDL)" },
+    ],
   },
   {
     name: "Why Eminence?",
@@ -26,8 +35,8 @@ export const routes = [
     element: <OurUSP />,
   },
   {
-    name: "Contct Us",
-    path: "/contct-us",
+    name: "Contact Us",
+    path: "/contact-us",
     element: <ContactUs />,
   },
   // {

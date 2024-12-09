@@ -71,7 +71,7 @@ const SliderComponent = () => {
   return (
     <div
       className="py-8"
-      data-aos="fade-down"
+      data-aos="fade-up"
     >
       <Slider {...settings}>
         {sliderData.map((item, index) => (

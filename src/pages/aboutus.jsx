@@ -42,68 +42,67 @@ export function AboutUs() {
             <section className="relative block h-[50vh]">
                 <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/About_grapgics.jpg')] bg-cover bg-center scale-x-105 scale-y-100" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-                <div className="max-w-8xl container relative mx-auto">
-                    <div className="flex flex-wrap items-center">
-                        <div className="ml-auto mr-auto  px-4 text-center lg:w-8/12 mt-48">
+                <div className="max-w-8xl relative mx-auto h-full flex items-center">
+                    <div className="flex items-center  h-full w-full">
+                        <div className="text-left bg-white lg:w-[30%] h-44 flex justify-center items-center p-6">
                             <h1
                                 variant="h1"
-                                color="white"
-                                className="mb-6 font-black lg:text-7xl md:text-6xl  text-5xl text-white "
-                                data-aos="fade-down"
+                                className="mb-6 font-black lg:text-7xl md:text-6xl text-5xl text-custome-blue font-Signika"
+                                data-aos="fade-up"
                             >
                                 About Us
                             </h1>
-
-
                         </div>
                     </div>
                 </div>
             </section>
 
 
-            <section className="container mx-auto my-5">
-                <div className="lg:w-[20%] w-[70%] px-4">
-                    <button
-                        className="bg-white text-black border-[1px] px-4 py-2 rounded shadow-md w-full text-left"
-                        onClick={toggleDropdown}
-                    >
-                        Dropdown
-                    </button>
-                    {isOpen && (
-                        <div className="my-2 bg-white rounded shadow-lg w-full">
-                            <ul className="mb-10">
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("OurHistory")}
-                                >
-                                    Our History
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("WhoWeAre")}
-                                >
-                                    Who We Are
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("OurValues")}
-                                >
-                                    Our Values
-                                </li>
-                            </ul>
-                        </div>
-                    )}
-                </div>
-            </section>
+            {/*
+                <section className="container mx-auto my-5">
+                    <div className="lg:w-[20%] w-[70%] px-4">
+                        <button
+                            className="bg-white text-black border-[1px] px-4 py-2 rounded shadow-md w-full text-left"
+                            onClick={toggleDropdown}
+                        >
+                            Dropdown
+                        </button>
+                        {isOpen && (
+                            <div className="my-2 bg-white rounded shadow-lg w-full">
+                                <ul className="mb-10">
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("OurHistory")}
+                                    >
+                                        Our History
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("WhoWeAre")}
+                                    >
+                                        Who We Are
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("OurValues")}
+                                    >
+                                        Our Values
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            */}
 
             <div id="OurHistory" />
             <section className=" bg-white ">
                 <div className=" mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
                     <div className="container mx-auto"
-                        data-aos="fade-down"
+                        data-aos="fade-up"
                     >
                         <div className="lg:mt-20"
-                            data-aos="fade-down"
+                            data-aos="fade-up"
                         >
                             <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
                                 <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
@@ -115,11 +114,11 @@ export function AboutUs() {
                                     {/* Right side text */}
                                     <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
                                         <div className=" text-left mb-3" >
-                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide">
+                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide font-Bai">
                                                 Our History
                                             </h2>
                                         </div>
-                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl">
+                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl font-Signika">
                                             Eminence IT Services started in 2021 partnering with the best Accounting Software and Business Solutions. The journey started with 2 people team to a strong 15+ enthusiastic and energetic team with rich knowledge on product and domain as we have tailor-made solutions to over 2500+ business houses of all sizes from SME to large-sized, private, and public sector organizations across the globe.
                                         </Typography>
                                     </CardBody>
@@ -136,10 +135,10 @@ export function AboutUs() {
             <section className=" bg-white ">
                 <div className=" mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
                     <div className="container mx-auto"
-                        data-aos="fade-down"
+                        data-aos="fade-up"
                     >
                         <div className="lg:mt-20"
-                            data-aos="fade-down"
+                            data-aos="fade-up"
                         >
                             <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
                                 <Card className="rounded-lg lg:flex lg:flex-row-reverse shadow-none">
@@ -152,11 +151,11 @@ export function AboutUs() {
                                     {/* Right side text */}
                                     <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
                                         <div className=" text-left mb-3" >
-                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide">
+                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide font-Bai">
                                                 Who We Are
                                             </h2>
                                         </div>
-                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl">
+                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl font-Signika">
                                             At Eminence IT Services, we are a team of passionate and experienced developers, designers, and problem-solvers dedicated to building innovative solutions that drive growth and success for our clients.
                                             <br />
                                             <br />
@@ -176,10 +175,10 @@ export function AboutUs() {
             <section className=" bg-white mb-36">
                 <div className=" mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
                     <div className="container mx-auto"
-                        data-aos="fade-down"
+                        data-aos="fade-up"
                     >
                         <div className="lg:mt-20"
-                            data-aos="fade-down"
+                            data-aos="fade-up"
                         >
                             <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
                                 <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
@@ -193,11 +192,11 @@ export function AboutUs() {
                                     {/* Right side text */}
                                     <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
                                         <div className=" text-left mb-3" >
-                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide">
+                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide font-Bai">
                                                 Our Values
                                             </h2>
                                         </div>
-                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl">
+                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl font-Signika">
                                             Collaboration: We believe in working closely with our clients to understand their goal, challenges and their requirements.
                                             <br />
                                             <br />

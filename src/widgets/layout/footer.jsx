@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import { Typography, IconButton } from "@material-tailwind/react";
 import FT_Logo from "../../assets/Logo/FT_LOGO_EMINENCE_TRANSPARENT.png"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const year = new Date().getFullYear();
 
@@ -16,9 +17,12 @@ export function Footer({ title, description, socials, menus, copyright }) {
               {title}
               */}
 
-              <img src={FT_Logo} alt="FT_Logo" className="h-24" />
+              {/* When Address Not Display
+                <img src={FT_Logo} alt="FT_Logo" className="h-24" />
+                */}
+              <img src={FT_Logo} alt="FT_Logo" className="h-24 lg:h-44" />
             </Typography>
-            <div className="text-white text-left">
+            <div className="text-white text-left font-Signika hidden">
               <div className="flex flex-col  space-y-3">
                 <div className="md:flex md:space-x-2">
                   <p className="font-semibold">Company Name :</p> <p> EMINENCE IT SERVICES</p>
@@ -63,31 +67,31 @@ export function Footer({ title, description, socials, menus, copyright }) {
                 <Typography
                   variant="small"
                   color="blue-gray"
-                  className="mb-2 block font-medium uppercase cursor-pointer text-white text-xl"
+                  className="mb-2 block font-medium uppercase cursor-pointer text-white text-xl  font-Bai"
                 >
                   {name}
                 </Typography>
-                <ul className="mt-3">
+                <ul className="mt-3 ">
                   {items.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className=" font-Signika">
 
                       {item.path.startsWith('/') ? (
-                        <Link to={item.path}
+                        <HashLink to={item.path}
                           rel="noreferrer"
                           variant="small"
-                          className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize"
+                          className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize  font-Signika"
                         >
                           {item.name}
-                        </Link>
+                        </HashLink>
                       ) : (
-                        <Typography href={item.path}
-                          target="_blank"
+                        <HashLink href={item.path}
+                          // target="_blank"
                           rel="noreferrer"
                           variant="small"
-                          className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize"
+                          className="mb-2 block font-normal text-white hover:text-blue-gray-700 cursor-pointer text-lg capitalize  font-Signika"
                         >
                           {item.name}
-                        </Typography>
+                        </HashLink>
                       )}
 
                       {/*
@@ -112,7 +116,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
           <div className="mx-auto w-full px-4 md:text-center">
             <Typography
               variant="small"
-              className="font-normal text-blue-gray-500 text-lg"
+              className="font-normal text-blue-gray-500 text-lg  font-Signika"
             >
               {copyright}
             </Typography>
@@ -155,10 +159,10 @@ Footer.defaultProps = {
     {
       name: "About Us",
       items: [
-        { name: "Our history", path: "https://www.creative-tim.com/presentation" },
-        { name: "who we are ", path: "https://www.creative-tim.com/blog" },
-        { name: "Our Values", path: "https://www.creative-tim.com/blog" },
-        { name: "Our team", path: "https://www.creative-tim.com/blog" },
+        { name: "Our history", path: "/aboutus#OurHistory" },
+        { name: "who we are ", path: "/aboutus#WhoWeAre" },
+        { name: "Our Values", path: "/aboutus#OurValues" },
+        { name: "Our team", path: "/" },
         { name: "privacy policys", path: "/privacy-policys" },
       ],
     },

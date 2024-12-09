@@ -106,9 +106,9 @@ const ReviewsCarousel = () => {
 
   return (
     <div className="mt-8" 
-    data-aos="fade-down"
+    data-aos="fade-up"
     >
-      <h2 className=" text-2xl font-bold mb-6 text-dark-blue uppercase px-4 md:text-4xl text-2xl">Our Clients with Reviews</h2>
+      <h2 className=" font-Bai font-bold mb-6 text-dark-blue uppercase px-4 md:text-4xl text-2xl">Our Clients with Reviews</h2>
       <Slider {...settings}>
         {clientReviews.map((item, index) => (
           <div key={index} className="px-4">

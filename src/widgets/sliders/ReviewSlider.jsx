@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
 import { Card, CardBody, Tooltip, Typography } from "@material-tailwind/react";
 import ReactStars from "react-stars";
+import { useState } from "react";
 
 export function ReviewSlider({ image, name, review, rating }) {
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  const handleReadMore = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
   return (
     <Card className="rounded-lg shadow-lg h-full mb-10 border-[1px]">
       <CardBody className="lg:p-6 p-4 flex flex-col min-h-[300px] items-left text-left justify-between">
@@ -22,12 +29,20 @@ export function ReviewSlider({ image, name, review, rating }) {
             edit={false}
           />
         </div>
-        <Tooltip content={review} placement="bottom" className="w-72 bg-gray-700">
-          <Typography className="font-normal text-blue-gray-600 cursor-pointer">
-            {review.length > 260 ? review.substring(0, 260) + '...' : review}
-          </Typography>
-        </Tooltip>
-        <Typography variant="h5" className="mb-2 text-dark-blue" color="blue-gray">
+        <Typography className="font-normal text-blue-gray-600 font-Signika">
+          {showFullDescription || review.length <= 180
+            ? review
+            : `${review.substring(0, 180)}...`}
+        </Typography>
+        {review.length > 180 && (
+          <div
+            onClick={handleReadMore}
+            className="text-custome-blue cursor-pointer text-right mt-2"
+          >
+            {showFullDescription ? "Read Less" : "Read More"}
+          </div>
+        )}
+        <Typography variant="h5" className="mb-2 text-dark-blue font-Signika mt-2" color="blue-gray">
           {name}
         </Typography>
       </CardBody>

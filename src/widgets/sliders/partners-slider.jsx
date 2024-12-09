@@ -97,11 +97,11 @@ const PartnersSliderComponent = () => {
 
   return (
     <div className="my-8 overflow-hidden" 
-    data-aos="fade-down"
+    data-aos="fade-up"
     >
       <Typography
         variant="h4"
-        className="font-bold text-dark-blue mb-6 text-left px-4 md:text-4xl text-2xl"
+        className="font-bold text-dark-blue mb-6 text-left px-4 md:text-4xl text-2xl font-Bai"
       >
       OUR PARTNERS
       </Typography>

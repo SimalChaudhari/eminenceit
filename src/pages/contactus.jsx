@@ -84,10 +84,10 @@ export function ContactUs() {
     };
 
     return (
-        <div className="overflow-x-hidden">
+        <div className="overflow-x-hidden ">
 
 
-            <section className="relative bg-white border-y-2 py-10">
+            <section className="relative bg-white border-y-2 py-10 font-Signika">
                 <div className="container mx-auto px-4 ">
                     <div className="md:flex">
 
@@ -134,11 +134,11 @@ export function ContactUs() {
                             <div className="py-10 md:px-10">
                                 <Typography
                                     variant="h4"
-                                    className="font-bold text-dark-blue mb-6 md:text-center capitalize md:text-3xl text-xl text-left"
+                                    className="font-Signika font-bold text-dark-blue mb-6 md:text-center capitalize md:text-3xl text-xl text-left"
                                 >
                                     Get in touch with us and let us take your business to next level
                                 </Typography>
-                                <form onSubmit={handleSubmit} className="space-y-4">
+                                <form onSubmit={handleSubmit} className="space-y-4 font-Signika">
                                     {successMessage && (
                                         <div className={`p-4 rounded-lg shadow-lg ${successMessage.includes("successfully") ? "bg-green-500 text-white" : "bg-red-500 text-white"} text-center`}>
                                             {successMessage}
@@ -281,7 +281,7 @@ export function ContactUs() {
                                     </div>
                                     <Button
                                         type="submit"
-                                        className="px-8 py-3 bg-dark-blue text-white font-semibold text-lg rounded-lg hover:bg-sky-blue transition duration-300"
+                                        className="px-8 py-3 font-Signika bg-dark-blue text-white font-semibold text-lg rounded-lg hover:bg-sky-blue transition duration-300"
 
                                         disabled={loading}
                                     >
@@ -294,13 +294,13 @@ export function ContactUs() {
                 </div>
             </section>
 
-            <section className="relative bg-white pb-36">
+            <section className="relative bg-white pb-36 font-Signika">
                 <div className="container mx-auto px-4">
                     {/* FAQ Section */}
                     <div className="mt-10">
                         <Typography
                             variant="h4"
-                            className="font-bold text-blue-gray-900 mb-6 text-center"
+                            className="font-bold text-blue-gray-900 mb-6 text-center font-Signika"
                         >
                             Frequently Asked Questions
                         </Typography>
@@ -309,7 +309,7 @@ export function ContactUs() {
                                 <summary className="font-bold text-blue-gray-800 cursor-pointer">
                                     What separates you from the competition?
                                 </summary>
-                                <Typography className="text-blue-gray-600 mt-2">
+                                <Typography className="text-blue-gray-600 mt-2 font-Signika">
                                     Our domain knowledge and expertise in solutions providing make us unique.
                                 </Typography>
                             </details>
@@ -317,7 +317,7 @@ export function ContactUs() {
                                 <summary className="font-bold text-blue-gray-800 cursor-pointer">
                                     Is your help desk open 24/7?
                                 </summary>
-                                <Typography className="text-blue-gray-600 mt-2">
+                                <Typography className="text-blue-gray-600 mt-2 font-Signika">
                                     No, however, you can fill up the enquiry form, and our team will attend to it ASAP.
                                 </Typography>
                             </details>

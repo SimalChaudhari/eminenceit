@@ -38,12 +38,12 @@ export function HomeSlider({ color, icon, title, description, isEven }) {
                         {icon}
                     </IconButton>
                     */}
-                    <Typography variant="h3" className="mb-4 text-white" color="blue-gray">
+                    <Typography variant="h3" className="mb-4 text-white font-Bai" color="blue-gray">
                         {title}
                     </Typography>
                 </div>
 
-                <Typography className="font-normal text-white">
+                <Typography className="font-normal text-white font-Signika text-left">
                     {showFullDescription
                         ? description
                         : description.length > 120

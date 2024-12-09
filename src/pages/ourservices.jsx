@@ -29,77 +29,76 @@ export function OurServices() {
             <section className="relative block h-[50vh]">
                 <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/Services_graphic.jpg')] bg-cover bg-center scale-x-105 scale-y-100" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-                <div className="max-w-8xl container relative mx-auto">
-                    <div className="flex flex-wrap items-center">
-                        <div className="ml-auto mr-auto  px-4 text-center lg:w-8/12 mt-48">
+                <div className="max-w-8xl relative mx-auto h-full flex items-center">
+                    <div className="flex items-center  h-full w-full">
+                        <div className="text-left bg-white lg:w-[30%] h-44 flex justify-center items-center p-6">
                             <h1
                                 variant="h1"
-                                color="white"
-                                className="mb-6 font-black lg:text-7xl md:text-6xl  text-5xl text-white "
-                                data-aos="fade-down"
+                                className="mb-6 font-black lg:text-7xl md:text-6xl text-5xl text-custome-blue font-Signika"
+                                data-aos="fade-up"
                             >
                                 Our Services
                             </h1>
-
-
                         </div>
                     </div>
                 </div>
             </section>
 
 
-            <section className="container mx-auto my-5">
-                <div className="lg:w-[20%] w-[70%] px-4">
-                    <button
-                        className="bg-white text-black border-[1px] px-4 py-2 rounded shadow-md w-full text-left"
-                        onClick={toggleDropdown}
-                    >
-                        Dropdown
-                    </button>
-                    {isOpen && (
-                        <div className="my-2 bg-white rounded shadow-lg w-full">
-                            <ul className="mb-10">
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("TallyTraining")}
-                                >
-                                    Tally Training
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("WebsiteDevelopment")}
-                                >
-                                    Website Development
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("WebApppDevelopment")}
-                                >
-                                    Web Appp Development
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("HybridMobileAppDevelopment")}
-                                >
-                                    Hybrid Mobile App Development
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("NativeAppDevelopment")}
-                                >
-                                    Native Mobile App Development
-                                </li>
-                                <li
-                                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                                    onClick={() => handleSelection("TallyDevelopment(TDL)")}
-                                >
-                                    Tally Development (TDL)
-                                </li>
-                            </ul>
-                        </div>
-                    )}
-                </div>
-            </section>
+            {/*
+                <section className="container mx-auto my-5">
+                    <div className="lg:w-[20%] w-[70%] px-4">
+                        <button
+                            className="bg-white text-black border-[1px] px-4 py-2 rounded shadow-md w-full text-left"
+                            onClick={toggleDropdown}
+                        >
+                            Dropdown
+                        </button>
+                        {isOpen && (
+                            <div className="my-2 bg-white rounded shadow-lg w-full">
+                                <ul className="mb-10">
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("TallyTraining")}
+                                    >
+                                        Tally Training
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("WebsiteDevelopment")}
+                                    >
+                                        Website Development
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("WebApppDevelopment")}
+                                    >
+                                        Web Appp Development
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("HybridMobileAppDevelopment")}
+                                    >
+                                        Hybrid Mobile App Development
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("NativeAppDevelopment")}
+                                    >
+                                        Native Mobile App Development
+                                    </li>
+                                    <li
+                                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => handleSelection("TallyDevelopment(TDL)")}
+                                    >
+                                        Tally Development (TDL)
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            */}
 
 
             <div id="TallyTraining" />
@@ -112,10 +111,10 @@ export function OurServices() {
                     />
 
                     <div className="container mx-auto text-left md:mt-2 px-4 py-2"
-                        data-aos="fade-down"
+                        data-aos="fade-up"
                     >
                         <div className="flex">
-                            <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue">TALLY TRAINING</h2>
+                            <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue font-Bai">TALLY TRAINING</h2>
                             <h2 className="w-1/2 hidden md:block"></h2>
                         </div>
                     </div>
@@ -125,9 +124,9 @@ export function OurServices() {
 
                             <div className="w-[50%]"></div>
                             <div className="bg-[#1F1F1F] w-full md:w-[50%] md:p-8 text-center px-4"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4">
+                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
                                     As your business grows, so does the amount of data you need to deal with. Growing organizations find streamlining processes and the information flowing through these processes very challenging. Often mismanagement costs dearly in terms of time and money. Eminence IT Services comes to your rescue in such a situation
                                     <br />
                                     <br />
@@ -160,15 +159,15 @@ export function OurServices() {
                         <div className="container mx-auto md:flex flex-row-reverse justify-center items-end md:mt-96">
 
                             <div className="container mx-auto text-left md:mt-12 px-4 py-2 md:w-[50%]"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue">Website Development</h2>
+                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue font-Bai">Website Development</h2>
                             </div>
 
                             <div className="bg-[#1F1F1F] w-full md:w-[50%] md:p-8 text-center px-4"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4">
+                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
                                     "We design, build, and launch websites that drive results. Our expert team creates custom, mobile-friendly,
                                     and user-centric websites that capture your brand's essence and meet your business goals. From e-commerce solutions to responsive designs,
                                     we develop websites that are both visually stunning and functional, ensuring a seamless user experience that sets you apart from the competition."
@@ -199,15 +198,15 @@ export function OurServices() {
                         <div className="container mx-auto md:flex flex-row justify-center items-end md:mt-96">
 
                             <div className="container mx-auto text-left md:mt-12 px-4 py-2 md:w-[50%]"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue">Web App Development</h2>
+                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue font-Bai">Web App Development</h2>
                             </div>
 
                             <div className="bg-[#1F1F1F] w-full md:w-[50%] md:p-8 text-center px-4"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4">
+                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
                                     "We craft robust, scalable, and secure web applications that power your business.
                                     Our expert team builds custom solutions using cutting-edge technologies,
                                     integrating features like user authentication, data analytics,
@@ -240,15 +239,15 @@ export function OurServices() {
                         <div className="container mx-auto md:flex flex-row-reverse justify-center items-end md:mt-96">
 
                             <div className="container mx-auto text-left md:mt-12 px-4 py-2 md:w-[50%]"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue md:mt-40 md:pt-10">Hybrid Mobile App Development</h2>
+                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue md:mt-40 md:pt-10 font-Bai">Hybrid Mobile App Development</h2>
                             </div>
 
                             <div className="bg-[#1F1F1F] w-full md:w-[50%] md:p-8 text-center px-4"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4">
+                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
                                     "We build hybrid mobile apps that combine the best of both worlds:
                                     the reach of web apps and the power of native apps. Our expert team uses cutting-edge
                                     frame works like React Native and Ionic to create seamless, user-friendly experiences
@@ -280,15 +279,15 @@ export function OurServices() {
                         <div className="container mx-auto md:flex flex-row justify-center items-end md:mt-96">
 
                             <div className="container mx-auto text-left md:mt-12 px-4 py-2 md:w-[50%]"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue md:mt-40 md:pt-10">Native Mobile App Development</h2>
+                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue md:mt-40 md:pt-10 font-Bai">Native Mobile App Development</h2>
                             </div>
 
                             <div className="bg-[#1F1F1F] w-full md:w-[50%] md:p-8 text-center px-4"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4">
+                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
                                     "We craft native mobile apps that deliver unparalleled performance, security,
                                     and user experience for iOS and Android devices. Our skilled developers use platform-specific
                                     languages like Swift, Java, and Kotlin to build apps that leverage device hardware, ensuring a smooth,
@@ -320,15 +319,15 @@ export function OurServices() {
                         <div className="container mx-auto md:flex flex-row-reverse justify-center items-end md:mt-96">
 
                             <div className="container mx-auto text-left md:mt-12 px-4 py-2 md:w-[50%]"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue md:mt-40 md:pt-10">Tally Development (TDL)</h2>
+                                <h2 className="md:text-5xl text-3xl font-bold uppercase md:mb-6 text-dark-blue md:mt-40 md:pt-10 font-Bai">Tally Development (TDL)</h2>
                             </div>
 
                             <div className="bg-[#1F1F1F] w-full md:w-[50%] md:p-8 text-center px-4"
-                                data-aos="fade-down"
+                                data-aos="fade-up"
                             >
-                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4">
+                                <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
                                     "Tally Development: We customize and extend Tally ERP solutions to meet your unique business needs.
                                     Our expert team develops tailored plugins, integrations, and modifications to enhance Tally's capabilities,
                                     streamline your operations, and drive growth."
