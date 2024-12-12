@@ -155,10 +155,13 @@ export function Navbar({ brandName, routes, action }) {
               {hoveredMenu === name && submenu && (
                 <ul className="absolute top-full mt-0 left-0 w-auto rounded-lg bg-white shadow-lg z-10">
                   {submenu.map((item) => (
-                    <li key={item.name} className="px-4 py-2 hover:bg-gray-100">
+                    <li key={item.name} className="px-4 py-2 hover:bg-gray-100 md:whitespace-nowrap">
                       <HashLink
                         to={item.path}
                         className="text-black font-semibold hover:text-dark-blue"
+                        // onClick={() => setHoveredMenu(null)}
+                        // onClick={() => setOpenNav(false)}
+                        
                       >
                         {item.name}
                       </HashLink>

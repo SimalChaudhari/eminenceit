@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-    FaRegFileAlt,
+    // FaRegFileAlt,
     FaUsers,
     FaLightbulb,
     FaUserFriends,
@@ -9,30 +9,30 @@ import {
 } from "react-icons/fa";
 
 const cards = [
-    {
-        icon: <FaRegFileAlt className="text-custome-blue text-6xl mb-4" />,
-        title: "Our Policy",
-        description: "Offering Quality IT Services At Affordable Cost By Delivering 'On Time'",
-    },
+    // {
+    //     icon: <FaRegFileAlt className="text-custome-blue text-6xl mb-4" />,
+    //     title: "Our Policy",
+    //     description: "Offering Quality IT Services At Affordable Cost By Delivering 'On Time'",
+    // },
     {
         icon: <FaUsers className="text-custome-blue text-6xl mb-4" />,
         title: "What We Do",
-        description: "Strong Technical Support",
+        description: "Executing the projects smoothly and Enhancing Recognition in the Digital World.",
     },
     {
         icon: <FaLightbulb className="text-custome-blue text-6xl mb-4" />,
-        title: "Our Strength",
-        description: "Our innovative ideas help clients grow exponentially.",
+        title: "Our Policy ",
+        description: "Offering standard quality IT Services and Solutions at a reasonable cost.",
     },
     {
         icon: <FaUserFriends className="text-custome-blue text-6xl mb-4" />,
-        title: "What We Provide",
-        description: "Reliable IT support and cloud-based solutions.",
+        title: "What We Provide ",
+        description: "Tailor made solutions with strong technical support.",
     },
     {
         icon: <FaSmile className="text-custome-blue text-6xl mb-4" />,
-        title: "Our Happiness",
-        description: "Ensuring client satisfaction is our priority.",
+        title: "Our Happiness ",
+        description: "Focus on delivering exceptional customer experiences, including responsive support and tailored solutions.",
     },
 ];
 
@@ -44,7 +44,7 @@ function StrategiesComponent() {
             {/* Image or Strategy header */}
 
             {/* Cards section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 font-Signika">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 font-Signika">
                 {cards.map((card, index) => (
                     <div
                         key={index}

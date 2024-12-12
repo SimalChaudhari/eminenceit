@@ -40,7 +40,7 @@ export function OurUSP() {
                     <div className="absolute inset-0 flex items-center justify-center text-center z-10 ">
                         <div className="container mx-auto px-4 lg:px-0">
                             <h1 className="font-black text-5xl lg:text-7xl text-white font-Signika" data-aos="fade-up">
-                                Why Us?
+                                Why Eminence It?
                             </h1>
                         </div>
                     </div>
@@ -60,17 +60,22 @@ export function OurUSP() {
                 }}
             >
                 {/* Left side title box with overlay */}
-                <div className="flex items-center justify-start h-full bg-black bg-opacity-30">
-                    <div className="text-left bg-white lg:w-[30%] h-44 flex justify-center items-center p-6"
+                <div className=" h-full bg-black bg-opacity-30">
+                    <div className="max-w-1/2 relative mx-auto h-full flex items-center"
                         data-aos="fade-up"
                     >
-                        <Typography
-                            variant="h2"
-                            color="blue-gray"
-                            className="mb-3 mt-2 font-bold text-custome-blue lg:text-5xl font-Signika"
-                        >
-                            Our Expertize
-                        </Typography>
+                        <div className=" gap-4">
+                            <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
+
+
+                                <h3
+                                    variant="h5"
+                                    className="font-bold text-white tracking-wide gap-6 max-w-md font-Signika"
+                                >
+                                    Our Expertize
+                                </h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Card>
@@ -98,15 +103,17 @@ export function OurUSP() {
                                         Our Microsoft solutions enable seamless collaboration, enhanced productivity,
                                         and robust security.
                                         With Microsoft get data-driven insights of your business for faster and accurate decision makings.”
-                                        <br />
-                                        At Eminence IT Services, we go beyond helping businesses transform through technology.
-                                        We help them in making a meaningful difference; to their customers,
-                                        and to the communities they serve. Better Cybersecurity
-                                        <br />
-                                        Measures Cut Down On Operational Costs Tap Into Specialized Expertise 24/7 Support from a Dedicated Team Scale At Your Own Pace
-                                        <br />
-                                        Foster Creativity and Innovation Ensure Regulatory Compliance Stay Ahead of the Curve Bounce Back Faster Focus on What Your Business Does Best
-                                        <br />
+                                        {/*
+                                            <br />
+                                            At Eminence IT Services, we go beyond helping businesses transform through technology.
+                                            We help them in making a meaningful difference; to their customers,
+                                            and to the communities they serve. Better Cybersecurity
+                                            <br />
+                                            Measures Cut Down On Operational Costs Tap Into Specialized Expertise 24/7 Support from a Dedicated Team Scale At Your Own Pace
+                                            <br />
+                                            Foster Creativity and Innovation Ensure Regulatory Compliance Stay Ahead of the Curve Bounce Back Faster Focus on What Your Business Does Best
+                                            <br />
+                                            */}
                                     </Typography>
                                 </CardBody>
                             </Card>

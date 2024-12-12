@@ -3,7 +3,7 @@ import { FaRegClock } from 'react-icons/fa';
 import { AiOutlineSmile } from 'react-icons/ai';
 import { GiTrophyCup } from 'react-icons/gi';
 import { IoMdThumbsUp } from 'react-icons/io';
-import PortfolioImage from '../../assets/images/portfolio.webp'; // Make sure to import the background image
+import PortfolioImage from '../../assets/images/Our_Achievements_and_Awards_Background.jpg'; // Make sure to import the background image
 import { Card, Typography } from '@material-tailwind/react';
 
 const cards = [
@@ -34,7 +34,7 @@ function AchievementsAndAwardsComponent() {
         <section className="bg-white md:pb-24 pb-[40rem]">
             <div className="md:h-[520px] h-screen relative">
                 <Card
-                    className="shadow-lg border shadow-gray-500/10 rounded-none"
+                    className="shadow-lg border  rounded-none"
                     style={{
                         backgroundImage: `url(${PortfolioImage})`,  // Using imported image
                         backgroundSize: 'cover',
@@ -63,7 +63,7 @@ function AchievementsAndAwardsComponent() {
                         <div className="bg-light-red-600 absolute mt-32 mb-52 px-4" data-aos="fade-up">
                             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {cards.map((card, index) => (
-                                    <div key={index} className="shadow-lg border shadow-gray-500/10 rounded-none bg-custome-brown">
+                                    <div key={index} className="shadow-lg border shadow-gray-500/10 rounded-none bg-custome-blue">
                                         <div className="flex items-center justify-center h-full">
                                             <div className="text-center p-6 flex flex-col items-center justify-center">
                                                 {/* Render the icon */}

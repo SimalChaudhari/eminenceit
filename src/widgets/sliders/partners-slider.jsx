@@ -103,7 +103,7 @@ const PartnersSliderComponent = () => {
         variant="h4"
         className="font-bold text-dark-blue mb-6 text-left px-4 md:text-4xl text-2xl font-Bai"
       >
-      OUR PARTNERS
+      Oro Partners
       </Typography>
       <Slider {...settings}>
         {partnersSliderData.map((item, index) => (

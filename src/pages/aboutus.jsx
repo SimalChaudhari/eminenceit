@@ -11,6 +11,7 @@ import { useState } from "react";
 import Develop_graphic from '../assets/images/Develop_graphic.jpg';
 import Eminence from '../assets/images/Eminence.jpg';
 import AI_graphic from '../assets/images/AI_graphic.jpg';
+import BackGround from "../assets/BackGround/Design_Template_BG.jpg";
 
 export function AboutUs() {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,16 +43,19 @@ export function AboutUs() {
             <section className="relative block h-[50vh]">
                 <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/About_grapgics.jpg')] bg-cover bg-center scale-x-105 scale-y-100" />
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-                <div className="max-w-8xl relative mx-auto h-full flex items-center">
-                    <div className="flex items-center  h-full w-full">
-                        <div className="text-left bg-white lg:w-[30%] h-44 flex justify-center items-center p-6">
-                            <h1
-                                variant="h1"
-                                className="mb-6 font-black lg:text-7xl md:text-6xl text-5xl text-custome-blue font-Signika"
-                                data-aos="fade-up"
+
+
+                <div className="max-w-1/2 relative mx-auto h-full flex items-center">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
+
+
+                            <h3
+                                variant="h5"
+                                className="font-bold text-white tracking-wide flex items-center gap-6 max-w-md font-Signika"
                             >
                                 About Us
-                            </h1>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -95,129 +99,125 @@ export function AboutUs() {
                 </section>
             */}
 
-            <div id="OurHistory" />
-            <section className=" bg-white ">
-                <div className=" mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
-                    <div className="container mx-auto"
-                        data-aos="fade-up"
-                    >
-                        <div className="lg:mt-20"
-                            data-aos="fade-up"
-                        >
-                            <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-                                <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
-                                    {/* Left side image */}
-                                    <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 lg:border-r-2">
-                                        <img src={Eminence} alt="Eminence" className="w-full h-full object-cover" />
-                                    </CardBody>
 
-                                    {/* Right side text */}
-                                    <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
-                                        <div className=" text-left mb-3" >
-                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide font-Bai">
-                                                Our History
-                                            </h2>
-                                        </div>
-                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl font-Signika">
-                                            Eminence IT Services started in 2021 partnering with the best Accounting Software and Business Solutions. The journey started with 2 people team to a strong 15+ enthusiastic and energetic team with rich knowledge on product and domain as we have tailor-made solutions to over 2500+ business houses of all sizes from SME to large-sized, private, and public sector organizations across the globe.
-                                        </Typography>
-                                    </CardBody>
-                                </Card>
+            <section className="relative bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${BackGround})` }}>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-white/10"></div>
+
+                {/* Content */}
+                <div className="relative z-10 container mx-auto py-20 px-5">
+
+                    <div id="OurHistory" />
+                    <section className="bg-light-gray py-10">
+                        <div className="container mx-auto">
+                            <div className="flex justify-center mb-6"
+                                data-aos="fade-up"
+                            >
+                                <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-6 py-3 border-[10px] border-dark-blue shadow-lg">
+                                    <h3 className="text-white md:text-4xl text-2xl font-bold font-Signika tracking-wide">
+                                        Our History
+                                    </h3>
+                                </div>
+                            </div>
+                            <div className="bg-gradient-to-l from-dark-blue to-custome-blue text-white px-6 py-8 shadow-lg"
+                                data-aos="fade-up"
+                            >
+                                <p className="text-white text-xl leading-relaxed font-Signika md:py-10">
+                                    Eminence IT Services started in 2021 partnering with the best Accounting
+                                    Software and Business Solutions. The journey started with 2 people team to a strong 15+
+                                    enthusiastic and energetic team with rich knowledge on product and domain as we have tailor-made
+                                    solutions to over 2500+ business houses of all sizes from SME to large-sized, private, and
+                                    public sector organizations across the globe.
+                                </p>
                             </div>
                         </div>
+                    </section>
 
-                    </div>
+                    <div id="WhoWeAre" />
+                    <section className="bg-light-gray py-10">
+                        <div className="container mx-auto">
+                            <div className="flex justify-center mb-6"
+                                data-aos="fade-up"
+                            >
+                                <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-6 py-3 border-[10px] border-dark-blue shadow-lg">
+                                    <h3 className="text-white md:text-4xl text-2xl font-bold font-Signika tracking-wide">
+                                        Who We Are
+                                    </h3>
+                                </div>
+                            </div>
+                            <div className="bg-gradient-to-l from-dark-blue to-custome-blue text-white px-6 py-8 shadow-lg"
+                                data-aos="fade-up"
+                            >
+                                <p className="text-white text-xl leading-relaxed font-Signika md:py-10">
 
-                </div>
-            </section>
+                                    At Eminence IT Services, we are a team of passionate and experienced developers, designers, and problem-solvers dedicated to building innovative solutions that drive growth and success for our clients.
+                                    <br />
+                                    <br />
+                                    With 15+ years of experience in the industry, we have established ourselves as a trusted partner for businesses seeking to elevate their digital presence and improve their operations through technology
 
-            <div id="WhoWeAre" />
-            <section className=" bg-white ">
-                <div className=" mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
-                    <div className="container mx-auto"
-                        data-aos="fade-up"
-                    >
-                        <div className="lg:mt-20"
-                            data-aos="fade-up"
-                        >
-                            <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-                                <Card className="rounded-lg lg:flex lg:flex-row-reverse shadow-none">
-                                    {/* Left side image */}
-                                    <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 lg:border-l-2 lg:mt-0 mt-5">
-                                        <img src={Develop_graphic} alt="Develop_graphic" className="w-full h-full object-cover" />
-                                    </CardBody>
-
-
-                                    {/* Right side text */}
-                                    <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
-                                        <div className=" text-left mb-3" >
-                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide font-Bai">
-                                                Who We Are
-                                            </h2>
-                                        </div>
-                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl font-Signika">
-                                            At Eminence IT Services, we are a team of passionate and experienced developers, designers, and problem-solvers dedicated to building innovative solutions that drive growth and success for our clients.
-                                            <br />
-                                            <br />
-                                            With 15+ years of experience in the industry, we have established ourselves as a trusted partner for businesses seeking to elevate their digital presence and improve their operations through technology
-                                        </Typography>
-                                    </CardBody>
-                                </Card>
+                                </p>
                             </div>
                         </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <div id="OurValues" />
-            <section className=" bg-white mb-36">
-                <div className=" mb-6  flex w-full px-4 min-w-0 flex-col break-words bg-white">
-                    <div className="container mx-auto"
-                        data-aos="fade-up"
-                    >
-                        <div className="lg:mt-20"
-                            data-aos="fade-up"
-                        >
-                            <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-                                <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
-
-                                    {/* Left side image */}
-                                    <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 lg:border-r-2 lg:mt-0 mt-5">
-                                        <img src={AI_graphic} alt="AI_graphic" className="w-full h-full object-cover" />
-                                    </CardBody>
+                    </section>
 
 
-                                    {/* Right side text */}
-                                    <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0 ">
-                                        <div className=" text-left mb-3" >
-                                            <h2 className="text-dark-blue lg:text-5xl md:text-4xl  text-3xl text-left font-bold uppercase tracking-wide font-Bai">
-                                                Our Values
-                                            </h2>
-                                        </div>
-                                        <Typography className=" font-normal text-blue-gray-500 lg:text-xl font-Signika">
-                                            Collaboration: We believe in working closely with our clients to understand their goal, challenges and their requirements.
-                                            <br />
-                                            <br />
-                                            Innovation: We stay up-to-date with the latest technologies and trends to ensure our solutions are always forward-thinking.
-                                            <br />
-                                            <br />
-                                            Quality: We take pride in delivering top-notch products that exceed our clients expectations.
-                                            <br />
-                                            <br />
-                                            Integrity: We operate with transparency and honesty, ensuring our clients trust and providing the best possible service.
-                                        </Typography>
-                                    </CardBody>
-
-                                </Card>
+                    <div id="OurValues" />
+                    <section className="bg-light-gray py-10">
+                        <div className="container mx-auto">
+                            {/* Title Section */}
+                            <div className="flex justify-center mb-6" data-aos="fade-up">
+                                <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-6 py-3 border-[10px] border-dark-blue shadow-lg">
+                                    <h3 className="text-white md:text-4xl text-2xl font-bold font-Signika tracking-wide">
+                                        Our Values
+                                    </h3>
+                                </div>
+                            </div>
+                            {/* Values Section */}
+                            <div
+                                className="bg-gradient-to-l from-dark-blue to-custome-blue px-6 py-14 shadow-lg"
+                                data-aos="fade-up"
+                            >
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    {/* Individual Value Cards */}
+                                    <div className="bg-white text-custome-blue p-4 rounded-lg shadow-md">
+                                        <h4 className="text-xl font-bold mb-3 border-b-2 pb-2">Collaboration</h4>
+                                        <p className="text-sm">
+                                            We believe in working closely with our clients to understand their
+                                            goal, challenges, and their requirements.
+                                        </p>
+                                    </div>
+                                    <div className="bg-white text-custome-blue p-4 rounded-lg shadow-md">
+                                        <h4 className="text-xl font-bold mb-3 border-b-2 pb-2">Innovation</h4>
+                                        <p className="text-sm">
+                                            We stay up-to-date with the latest technologies and trends to
+                                            ensure our solutions are always forward-thinking.
+                                        </p>
+                                    </div>
+                                    <div className="bg-white text-custome-blue p-4 rounded-lg shadow-md">
+                                        <h4 className="text-xl font-bold mb-3 border-b-2 pb-2">Quality</h4>
+                                        <p className="text-sm">
+                                            We take pride in delivering top-notch products that exceed our
+                                            clients’ expectations.
+                                        </p>
+                                    </div>
+                                    <div className="bg-white text-custome-blue p-4 rounded-lg shadow-md">
+                                        <h4 className="text-xl font-bold mb-3 border-b-2 pb-2">Integrity</h4>
+                                        <p className="text-sm">
+                                            We operate with transparency and honesty, ensuring our clients’
+                                            trust and providing the best possible service.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                    </div>
 
                 </div>
+
             </section>
+
+
 
             <div className="bg-white">
                 <Footer />

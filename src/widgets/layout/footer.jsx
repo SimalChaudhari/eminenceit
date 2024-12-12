@@ -18,23 +18,23 @@ export function Footer({ title, description, socials, menus, copyright }) {
               */}
 
               {/* When Address Not Display
-                <img src={FT_Logo} alt="FT_Logo" className="h-24" />
+                <img src={FT_Logo} alt="FT_Logo" className="h-24 lg:h-44" />
                 */}
-              <img src={FT_Logo} alt="FT_Logo" className="h-24 lg:h-44" />
+                <img src={FT_Logo} alt="FT_Logo" className="h-24" />
             </Typography>
-            <div className="text-white text-left font-Signika hidden">
+            <div className="text-white text-left font-Signika">
               <div className="flex flex-col  space-y-3">
                 <div className="md:flex md:space-x-2">
-                  <p className="font-semibold">Company Name :</p> <p> EMINENCE IT SERVICES</p>
+                  <p> EMINENCE IT SERVICES</p>
                 </div>
-                <div className="md:flex md:space-x-2">
-                  <p className="font-semibold">Address&nbsp;:</p> <p>  #174, 2ND Floor, 3rd Cross, Balaji Layout Mallathahalli Main Road, Bengaluru – 560056</p>
+                <div className="flex space-x-2">
+                  <p ><i class="fa-solid fa-location-dot"></i>&nbsp;</p> <p>  #174, 2ND Floor, 3rd Cross, Balaji Layout Mallathahalli Main Road, Bengaluru – 560056</p>
                 </div>
-                <div className="md:flex md:space-x-2">
-                  <p className="font-semibold">Contact :</p> <p> 9483627307 / 9742136985</p>
+                <div className="flex space-x-2">
+                  <p className="font-semibold"><i class="fa-solid fa-phone"></i></p> <p> 9483627307 / 9742136985</p>
                 </div>
-                <div className="md:flex md:space-x-2">
-                  <p className="font-semibold">Email ID :</p> <p> info@eminenceit.com</p>
+                <div className="flex space-x-2">
+                  <p className="font-semibold"><i class="fa-solid fa-envelope"></i></p> <p> info@eminenceit.com</p>
                 </div>
               </div>
 
@@ -142,17 +142,17 @@ Footer.defaultProps = {
     {
       color: "white",
       name: "instagram",
-      path: "https://www.instagram.com/creativetimofficial/",
+      path: "https://www.instagram.com/eminence_it_services/?hl=en",
     },
     {
       color: "white",
       name: "facebook",
-      path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      path: "https://www.facebook.com/profile.php?id=61552694126419",
     },
     {
       color: "white",
       name: "linkedin",
-      path: "https://github.com/creativetimofficial/material-tailwind",
+      path: "/",
     },
   ],
   menus: [
@@ -162,17 +162,15 @@ Footer.defaultProps = {
         { name: "Our history", path: "/aboutus#OurHistory" },
         { name: "who we are ", path: "/aboutus#WhoWeAre" },
         { name: "Our Values", path: "/aboutus#OurValues" },
-        { name: "Our team", path: "/" },
         { name: "privacy policys", path: "/privacy-policys" },
       ],
     },
     {
       name: "solutions",
       items: [
-        { name: "hospitals", path: "https://www.creative-tim.com/presentation" },
-        { name: "Schools & Institutions", path: "https://www.creative-tim.com/blog" },
-        { name: "Hotels & Restaurants", path: "https://www.creative-tim.com/blog" },
-        { name: "Manufacturing", path: "https://www.creative-tim.com/blog" },
+        { name: "Microsoft Dynamics", path: "https://www.creative-tim.com/presentation" },
+        { name: "Tally Verticle Solutions", path: "https://www.creative-tim.com/blog" },
+        { name: "Campus 365", path: "https://www.creative-tim.com/blog" },
       ],
     },
     {
@@ -188,27 +186,23 @@ Footer.defaultProps = {
       name: "Services",
       items: [
         {
-          name: "Tally Development",
+          name: "ERP Implementations",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
         },
         {
-          name: "Microsoft dynamics",
+          name: "Custom Application Development",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
         },
         {
-          name: "website development",
+          name: "Tally Customisation & Trainings",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
-        },
-        {
-          name: "Web app Development",
-          path: "https://creative-tim.com/contact-us?ref=mtk",
         },
       ],
     },
   ],
   copyright: (
     <p className="text-white transition-colors hover:text-blue-500 cursor-pointer">
-      copyright © eminenceitservices, 2024 all rights reserved.
+      copyright © eminenceitservices, 2021 all rights reserved.
     </p>
   ),
 };

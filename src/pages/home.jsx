@@ -39,7 +39,7 @@ export function Home() {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-2">
             <div className="container mx-auto px-10 lg:px-0 items-center flex flex-col gap-4">
 
-              <img src={Logo} alt='Logo' className="md:w-[90%]"
+              <img src={Logo} alt='Logo' className="md:w-[60%]"
                 data-aos="fade-up"
               />
               <div
@@ -86,18 +86,18 @@ export function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className=""
+        <div className="container mx-auto px-4"
           data-aos="fade-up"
         >
           {/* Title Section */}
           <div className="mb-10 text-left">
             <div className="flex items-center gap-4">
-              <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-5xl text-3xl">
+              <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
 
 
                 <h3
                   variant="h5"
-                  className="font-bold uppercase text-white tracking-wide flex items-center gap-6 max-w-md font-Bai"
+                  className="font-bold text-white tracking-wide flex items-center gap-6 max-w-md font-Bai"
                 >
                   <img src={Arrow_Image_T} alt='Arrow_Image_T' className="w-[15%]" />
                   Our Mission
@@ -108,8 +108,8 @@ export function Home() {
 
           {/* Content Section */}
           <div className="flex justify-end items-center">
-            <div className="rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-r-0 rounded-r-none border-dark-blue md:w-[70%]">
-              <Typography className="md:text-2xl text-lg leading-relaxed font-Signika">
+            <div className="rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-dark-blue md:w-[70%]">
+              <Typography className="md:text-xl text-lg leading-relaxed font-Signika">
                 Our mission is to empower businesses to reach their full potential by
                 providing cutting-edge technological development solutions like
                 technical support, IT support, cyber security, cloud services,
@@ -117,7 +117,7 @@ export function Home() {
                 needs.
               </Typography>
               <br />
-              <Typography className="md:text-2xl text-lg leading-relaxed">
+              <Typography className="md:text-xl text-lg leading-relaxed">
                 We strive to deliver high-quality products that are both functional and
                 visually appealing, ensuring our clients stay ahead of the curve in an
                 ever-evolving digital landscape.
@@ -128,7 +128,7 @@ export function Home() {
       </section>
 
 
-      <section className="relative bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${our_Strategy})` }}>
+      <section className="relative bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${BackGround})` }}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/70"></div>
 
@@ -154,47 +154,43 @@ export function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className=""
+        <div className="container mx-auto px-4"
           data-aos="fade-up"
         >
           {/* Title Section */}
           <div className="mb-10 text-left">
             <div className="flex items-center gap-4">
-              <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-5xl text-3xl">
-                <h3
+              <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
+                <h5
                   variant="h5"
-                  className="font-bold uppercase text-white tracking-wide flex items-center gap-6 max-w-lg font-Bai"
+                  className="font-bold text-white tracking-wide flex items-center gap-6 max-w-lg font-Bai"
                 >
                   <img src={Arrow_Image_T} alt='Arrow_Image_T' className="w-[15%]" />
                   Our Objective
 
-                </h3>
+                </h5>
               </div>
             </div>
           </div>
 
           {/* Content Section */}
-          <div className="md:flex justify-between gap-10 items-center font-Signika">
+          <div className="md:flex justify-between gap-10  font-Signika">
 
-            <div className="md:mt-0 mt-10 rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-l-0 rounded-l-none border-dark-blue md:w-[70%]">
-              <Typography className="md:text-2xl text-lg leading-relaxed">
-                Eminence IT Services also offer our clients IT strategy, business process re engineering, IT staffing, independent verification and validation, and project management oversight. Our team has experts in the fields of market analysis, business analysis, product customization, software system integration, and delivery, who make sure that your business leverages technology to its full extent at every growth stage.
-                <br />
-                <br />
+            <div className="md:mt-0 mt-10 rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-dark-blue md:w-[70%]">
+              <Typography className="md:text-xl text-lg leading-relaxed">
+
                 At Eminence IT Services, we go beyond helping businesses transform through technology. We help them in making a meaningful difference; to their customers, and to the communities they serve.
+                <br />
+                <br />
+                Expanding the customer base, increase revenue, and maintain a competitive edge in the market, encourage innovation, Invest in Research and Development, and stay up-to-date with Emerging Technologies. Thereafter, Contribute to the well-being of local communities, support, diversity and inclusion, and promote digital literacy.
               </Typography>
               <br />
-              <Typography className="md:text-2xl text-lg leading-relaxed">
-                We strive to deliver high-quality products that are both functional and
-                visually appealing, ensuring our clients stay ahead of the curve in an
-                ever-evolving digital landscape.
-              </Typography>
             </div>
 
-            <div className="md:mt-0 mt-10 rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-r-0 rounded-r-none border-dark-blue md:w-[70%]">
+            <div className="md:mt-0 mt-10 rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-dark-blue md:w-[70%]">
               <ul className="list-disc">
                 {objectiveData.map(({ title }) => (
-                  <li key={title} className="my-3 text-white lg:text-2xl font-normal">
+                  <li key={title} className="my-3 text-white md:text-xl font-normal">
                     {title}
                   </li>
                 ))}
@@ -206,7 +202,7 @@ export function Home() {
 
       <section className="bg-gray-300 py-10">
 
-        <div className="container mx-auto">
+        <div className="px-4">
           {/*
           <hr className="my-20" />
           */}
@@ -220,7 +216,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto">
+      <section className="px-4">
         <div className="my-20">
           <ReviewsCarousel />
         </div>
