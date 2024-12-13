@@ -8,17 +8,13 @@ import { Footer } from "@/widgets/layout";
 import { objectiveData } from "@/data";
 import SliderComponent from "@/widgets/sliders/home-slider";
 import PartnersSliderComponent from "@/widgets/sliders/partners-slider";
-import ReviewsCarousel from "@/widgets/sliders/review-slider";
-import aboutBannerImage from '../assets/images/about_banner.jpg';
-import OurMissionImage from '../assets/images/OurMissionIMG.webp';
-import Develop_graphic from '../assets/images/Develop_graphic.jpg';
 import Logo from '../assets/Logo/LOGO_IT_SERVICES_TRANSPARENT.png';
 import BackGround from "../assets/BackGround/Design_Template_BG.jpg";
 import Blue_BackGround from "../assets/BackGround/TestimonialsBackground_BLUE_BG.jpg";
 import Arrow_Image_T from "../assets/images/Arrow_Image_T.png";
-import our_Strategy from "../assets/images/our_Strategy.jpg";
-import { FaRegFileAlt, FaUsers, FaLightbulb, FaUserFriends, FaSmile } from "react-icons/fa";
+import HeroBack from "../assets/Video/New_Motion_video_homepage.mp4";
 import StrategiesComponent from "@/widgets/components/StrategiesComponent";
+import ReviewsCarousel from "@/widgets/sliders/review-slider";
 
 export function Home() {
   return (
@@ -31,7 +27,7 @@ export function Home() {
             muted
             loop
           >
-            <source src="/video/Blue_BG.MP4" type="video/mp4" />
+            <source src={HeroBack} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
