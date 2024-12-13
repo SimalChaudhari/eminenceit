@@ -1,27 +1,14 @@
 import { Typography, Card, CardBody } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout";
-import aboutBannerImage from '../assets/images/about_banner.jpg';
 import OurExpertiseImage from '../assets/images/Eminence.jpg';
-import OurMissionImage from '../assets/images/Develop_graphic.jpg';
-import MSImage from '../assets/images/AI_graphic.jpg';
-import PortfolioImage from '../assets/images/portfolio.webp';
-import { FaRegClock } from 'react-icons/fa';
-import { AiOutlineSmile } from 'react-icons/ai';
-import { GiTrophyCup } from 'react-icons/gi';
-import { IoMdThumbsUp } from 'react-icons/io';
+import Microsoft_D from '../assets/images/Microsoft_D.png';
+import BackGround from "../assets/BackGround/Design_Template_BG.jpg";
+import Our_Technical_Exposure_Graphic from '../assets/images/Our_Technical_Exposure_Graphic.png';
+import ExpertizeBack from '../assets/Video/Our_Expertize.mp4';
 import AchievementsAndAwardsComponent from "@/widgets/components/AchievementsAndAwardsComponent";
 
 
 export function OurUSP() {
-    const filePath = "/File/Available_TCP_and_Modules_for_Tally_(without_Price).pdf"; // Set the correct file path here
-
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = filePath;
-        link.download = filePath.split('/').pop(); // Automatically use the file name from the path
-        link.click();
-    };
-
     return (
         <div className="overflow-x-hidden">
             <section className="relative block md:h-[50vh] h-[20vh]">
@@ -49,25 +36,28 @@ export function OurUSP() {
 
 
             <Card
-                className="shadow-lg border shadow-gray-500/10 rounded-none"
-                // data-aos="zoom-in"
+                className="shadow-lg border shadow-gray-500/10 rounded-none relative"
                 style={{
-                    backgroundImage: `url(${aboutBannerImage})`,  // Using imported image
-                    //   backgroundSize: 'cover',
-                    //   backgroundPosition: 'center',
-                    //   backgroundRepeat: 'no-repeat',
                     height: '400px',
                 }}
             >
-                {/* Left side title box with overlay */}
-                <div className=" h-full bg-black bg-opacity-30">
-                    <div className="max-w-1/2 relative mx-auto h-full flex items-center"
+                {/* Video Background */}
+                <video
+                    src={ExpertizeBack}
+                    autoPlay
+                    loop
+                    muted
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+
+                {/* Overlay and Content */}
+                <div className="absolute inset-0 bg-black bg-opacity-10">
+                    <div
+                        className="max-w-1/2 relative mx-auto h-full flex items-center"
                         data-aos="fade-up"
                     >
-                        <div className=" gap-4">
+                        <div className="gap-4">
                             <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
-
-
                                 <h3
                                     variant="h5"
                                     className="font-bold text-white tracking-wide gap-6 max-w-md font-Signika"
@@ -81,42 +71,51 @@ export function OurUSP() {
             </Card>
 
 
-            <section className="bg-white px-4">
-                <div className="container mx-auto">
-                    <div className="lg:mt-20"
-                        data-aos="fade-up"
-                    >
-                        <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-                            <Card className="rounded-lg lg:flex lg:flex-row shadow-none">
-                                {/* Left side image */}
-                                <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 ">
-                                    <img src={OurMissionImage} alt="OurMissionImage" className="w-full h-full object-cover" />
-                                </CardBody>
 
-                                {/* Right side text */}
-                                <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0">
-                                    <Typography className="text-dark-blue lg:text-3xl text-2xl text-left font-bold uppercase tracking-wide mb-2 font-Bai">
-                                        Microsoft Dynamics365
-                                    </Typography>
-                                    <Typography className="font-normal text-blue-gray-500 lg:text-lg font-Signika">
-                                        “With Microsoft, empower your businesses to achieve more.
-                                        Our Microsoft solutions enable seamless collaboration, enhanced productivity,
-                                        and robust security.
-                                        With Microsoft get data-driven insights of your business for faster and accurate decision makings.”
-                                        {/*
-                                            <br />
-                                            At Eminence IT Services, we go beyond helping businesses transform through technology.
-                                            We help them in making a meaningful difference; to their customers,
-                                            and to the communities they serve. Better Cybersecurity
-                                            <br />
-                                            Measures Cut Down On Operational Costs Tap Into Specialized Expertise 24/7 Support from a Dedicated Team Scale At Your Own Pace
-                                            <br />
-                                            Foster Creativity and Innovation Ensure Regulatory Compliance Stay Ahead of the Curve Bounce Back Faster Focus on What Your Business Does Best
-                                            <br />
-                                            */}
-                                    </Typography>
-                                </CardBody>
-                            </Card>
+            <section
+                className="bg-gray-100 md:pt-36 py-10 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url(${BackGround})`, // Replace with your background image
+                }}
+            >
+                <div className="container mx-auto px-4 relative">
+                    {/* Title */}
+                    <div className="md:absolute  md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:mb-0 mb-8">
+                        <div data-aos="fade-up"  className="inline-block bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
+                            <h3
+                                variant="h5"
+                                className="font-bold text-white tracking-wide gap-6 max-w-md font-Signika"
+                            >
+                                Microsoft Dynamics
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex flex-col lg:flex-row items-center lg:gap-10 md:p-20 p-10 rounded-lg shadow-lg"
+                        style={{
+                            background: "linear-gradient(to right, rgb(47 91 157 / 60%), rgb(45 94 112 / 39%))",
+                        }}
+                    >
+                        {/* Left Side: Text */}
+                        <div className="lg:w-1/2 mb-6 lg:mb-0">
+                            <p className="text-custome-blue text-lg md:text-2xl leading-relaxed items-center" data-aos="fade-up">
+                                “With Microsoft, empower your businesses to achieve more. Our Microsoft
+                                solutions enable seamless collaboration, enhanced productivity, and
+                                robust security. With Microsoft, get data-driven insights of your
+                                business for faster and accurate decision-making.”
+                            </p>
+                        </div>
+
+                        {/* Right Side: Image */}
+                        <div className="lg:w-1/2">
+                            <img
+                                src={Microsoft_D}
+                                alt="Microsoft Dynamics"
+                                className="md:h-96 w-full object-cover shadow-md"
+                                data-aos="fade-up"
+                            />
                         </div>
                     </div>
                 </div>
@@ -124,25 +123,32 @@ export function OurUSP() {
 
 
 
-            <section className="bg-white px-4 pb-20">
-                <div className="container mx-auto">
-                    <hr className="md:my-20 my-10" />
+            <section
+                className="bg-gray-100 py-10 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url(${BackGround})`, // Replace with your background image
+                }}
+            >
+                <div className="container mx-auto px-4">
+
+                    {/* Content */}
+                    <hr className="md:mb-20 my-10" />
                     <div className=""
                         data-aos="fade-up"
                     >
                         <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
-                            <Card className="rounded-lg lg:flex lg:flex-row-reverse shadow-none">
+                            <Card className="rounded-lg lg:flex lg:flex-row items-center shadow-none bg-transparent">
                                 {/* Left side image */}
-                                <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 ">
-                                    <img src={MSImage} alt="MSImage" className="w-full h-full object-cover" />
+                                <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 bg-transparent">
+                                    <img src={Our_Technical_Exposure_Graphic} alt="Our_Technical_Exposure_Graphic" className="md:w-96 w-full object-cover" />
                                 </CardBody>
 
                                 {/* Right side text */}
-                                <CardBody className="lg:w-1/2 flex flex-col lg:p-6 p-0">
-                                    <Typography className="text-dark-blue lg:text-3xl text-2xl text-left font-bold uppercase tracking-wide mb-2 font-Bai">
-                                        OUR TECHNICAL EXPOSURES
+                                <CardBody className="lg:w-1/2 flex flex-col md:p-6 p-0">
+                                    <Typography data-aos="fade-up" className="text-custome-blue md:text-5xl text-3xl text-left font-bold tracking-wide mb-2 font-Signika">
+                                        Our Technical Exposures
                                     </Typography>
-                                    <Typography className="font-normal text-blue-gray-500 lg:text-lg font-Signika">
+                                    <Typography data-aos="fade-up" className="font-normal text-custome-blue md:text-2xl text-xl font-Signika md:mt-3">
                                         We, Eminence IT Services with a rich and diverse experience in developing customized Tally solutions and other business solution tools for all businesses across sectors.
                                         <br />
                                         <br />
@@ -152,6 +158,11 @@ export function OurUSP() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+
+            <section className=" px-4">
+
             </section>
 
 
@@ -168,13 +179,15 @@ export function OurUSP() {
             >
                 {/* Left side title box with overlay */}
                 <div className="flex items-center justify-start h-full bg-black bg-opacity-30">
-                    <div className="text-left bg-white lg:w-[30%] h-44 flex justify-center items-center p-6"
+
+                    <div className="text-left bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl"
                         data-aos="fade-up"
                     >
+
                         <Typography
                             variant="h2"
                             color="blue-gray"
-                            className="mb-3 mt-2 font-bold text-custome-blue lg:text-5xl font-Signika"
+                            className="mb-3 mt-2 font-bold text-white lg:text-4xl font-Signika"
                         >
                             Our Expertise
                         </Typography>
@@ -193,13 +206,13 @@ export function OurUSP() {
                             <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full border-[1px] hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.7)]">
 
                                 <ul className="list-disc pl-5 space-y-2 text-dark-blue text-xl font-semibold opacity-80">
-                                    <li>Tally Sales and Service </li>
-                                    <li>Development of Customised Solutions.</li>
-                                    <li>Partner for Microsoft</li>
-                                    <li>Partner for Google</li>
-                                    <li>Business Intelligence Tools</li>
-                                    <li>Multiple ERP Software </li>
-                                    <li>Advanced Payroll Software</li>
+                                    <li data-aos="fade-up" >Tally Sales and Service </li>
+                                    <li data-aos="fade-up" >Development of Customised Solutions.</li>
+                                    <li data-aos="fade-up" >Partner for Microsoft</li>
+                                    <li data-aos="fade-up" >Partner for Google</li>
+                                    <li data-aos="fade-up" >Business Intelligence Tools</li>
+                                    <li data-aos="fade-up" >Multiple ERP Software </li>
+                                    <li data-aos="fade-up" >Advanced Payroll Software</li>
                                 </ul>
                             </div>
                         </div>
@@ -209,12 +222,12 @@ export function OurUSP() {
                             <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col h-full border-[1px] hover:border-blue-500 hover:shadow-[0_0_20px_rgba(0,111,184,0.7)]">
 
                                 <ul className="list-disc pl-5 space-y-2 text-dark-blue text-xl font-semibold opacity-80">
-                                    <li>Application and Website Developments</li>
-                                    <li>CRM</li>
-                                    <li>Networking & Firewalls</li>
-                                    <li>Cloud Computing</li>
-                                    <li>Computers, Laptops and Multiple Utility Hardware</li>
-                                    <li>Digital Signatures (Tokens)</li>
+                                    <li data-aos="fade-up" >Application and Website Developments</li>
+                                    <li data-aos="fade-up" >CRM</li>
+                                    <li data-aos="fade-up" >Networking & Firewalls</li>
+                                    <li data-aos="fade-up" >Cloud Computing</li>
+                                    <li data-aos="fade-up" >Computers, Laptops and Multiple Utility Hardware</li>
+                                    <li data-aos="fade-up" >Digital Signatures (Tokens)</li>
                                 </ul>
                             </div>
                         </div>
@@ -224,24 +237,8 @@ export function OurUSP() {
                 </div>
             </section>
 
-            <section className="bg-yellow-600">
+            <section className="">
                 <AchievementsAndAwardsComponent />
-            </section>
-
-
-            <section className="relative bg-white pb-24 mt-14">
-                <div className="container mx-auto px-4" data-aos="fade-up">
-
-                    {/* Download Button */}
-                    <div className="flex justify-center">
-                        <button
-                            onClick={handleDownload}
-                            className="px-8 py-3 bg-dark-blue text-white font-semibold text-lg rounded-lg hover:bg-sky-blue transition duration-300"
-                        >
-                            Download File
-                        </button>
-                    </div>
-                </div>
             </section>
 
 

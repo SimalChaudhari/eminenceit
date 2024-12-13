@@ -31,7 +31,7 @@ const cards = [
 
 function AchievementsAndAwardsComponent() {
     return (
-        <section className="bg-white md:pb-24 pb-[40rem]">
+        <section className="bg-white md:pb-24 pb-[45rem]">
             <div className="md:h-[520px] h-screen relative">
                 <Card
                     className="shadow-lg border  rounded-none"
@@ -67,11 +67,11 @@ function AchievementsAndAwardsComponent() {
                                         <div className="flex items-center justify-center h-full">
                                             <div className="text-center p-6 flex flex-col items-center justify-center">
                                                 {/* Render the icon */}
-                                                <div className="mb-4 font-Signika">{card.icon}</div>
+                                                <div data-aos="fade-up" className="mb-4 font-Signika">{card.icon}</div>
                                                 {/* Render the title */}
-                                                <h2 className="mb-3 mt-2 font-bold text-white lg:text-3xl text-2xl font-Signika">{card.title}</h2>
+                                                <h2 data-aos="fade-up" className="mb-3 mt-2 font-bold text-white lg:text-3xl text-2xl font-Signika">{card.title}</h2>
                                                 {/* Render the description */}
-                                                <p className="text-white font-Signika">{card.description}</p>
+                                                <p data-aos="fade-up" className="text-white font-Signika">{card.description}</p>
                                             </div>
                                         </div>
                                     </div>

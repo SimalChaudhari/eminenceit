@@ -45,7 +45,7 @@ export function AboutUs() {
                 <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
 
 
-                <div className="max-w-1/2 relative mx-auto h-full flex items-center">
+                <div className="max-w-1/2 relative mx-auto h-full flex items-center" data-aos="fade-up">
                     <div className="flex items-center gap-4">
                         <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
 

@@ -136,7 +136,8 @@ Footer.defaultProps = {
       color: "white",
       name: "whatsapp",
       // path: "https://www.twitter.com/creativetim",
-      "path": "https://wa.me/9483627307 ",
+      "path": "https://wa.me/8310939779 ",
+      // "path": "https://wa.me/9483627307 ",
       // path: "https://wa.me/9742136985",
     },
     {
@@ -187,15 +188,15 @@ Footer.defaultProps = {
       items: [
         {
           name: "ERP Implementations",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
+          path: "/our-services#ERPImplementation",
         },
         {
           name: "Custom Application Development",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
+          path: "/our-services#CustomApplicationDevelopment",
         },
         {
           name: "Tally Customisation & Trainings",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
+          path: "/our-services#TallyCustomizationsAndTrainings",
         },
       ],
     },

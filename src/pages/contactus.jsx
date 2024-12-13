@@ -3,7 +3,8 @@ import { Typography, Button, Input, Select, Option, Textarea } from "@material-t
 import { Footer } from "@/widgets/layout";
 import axios from "axios";
 import Contact_Map from "../assets/images/contactus_page.jpg"
-import image_Contect from "../assets/images/image_Contect.webp"
+import ContactUs_Image from "../assets/images/ContactUs_Image.png"
+import BackContactUs_Image from "../assets/images/Back_Contact_us.jpg"
 
 export function ContactUs() {
 
@@ -18,15 +19,29 @@ export function ContactUs() {
         enquiry: "",
         requirement: "",
         lead: "",
+        salesmanName: "",
     });
 
     const [errors, setErrors] = useState({});
     const [successMessage, setSuccessMessage] = useState("");
     const [loading, setLoading] = useState(false);
 
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setFormValues({ ...formValues, [name]: value });
+    //     setErrors({ ...errors, [name]: "" });
+    // };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormValues({ ...formValues, [name]: value });
+
+        // Reset "salesmanName" if "lead" changes to "Customer"
+        if (name === "lead" && value === "Customer") {
+            setFormValues({ ...formValues, [name]: value, salesmanName: "" });
+        } else {
+            setFormValues({ ...formValues, [name]: value });
+        }
+
         setErrors({ ...errors, [name]: "" });
     };
 
@@ -45,6 +60,10 @@ export function ContactUs() {
         if (!formValues.requirement.trim())
             newErrors.requirement = "Requirement details are required.";
         if (!formValues.lead) newErrors.lead = "Please select a lead type.";
+        if (formValues.lead === "Salesman" && !formValues.salesmanName.trim()) {
+            newErrors.salesmanName = "Salesman name is required.";
+        }
+
         return newErrors;
     };
 
@@ -67,6 +86,7 @@ export function ContactUs() {
                         enquiry: "",
                         requirement: "",
                         lead: "",
+                        salesmanName: "",
                     });
                 })
                 .catch(error => {
@@ -87,14 +107,15 @@ export function ContactUs() {
         <div className="overflow-x-hidden ">
 
 
-            <section className="relative bg-white border-y-2 py-10 font-Signika">
+            <section className="relative bg-white bg-opacity-20 border-y-2 py-10 font-Signika"
+            >
                 <div className="container mx-auto px-4 ">
                     <div className="md:flex">
 
                         {/* Left side text or content */}
                         <div className="flex flex-col justify-center md:w-1/2 w-full">
-                            <h2 className="text-3xl md:text-6xl font-bold text-dark-blue mb-4 uppercase">Contact Us</h2>
-                            <p className="md:text-lg text-gray-600 md:mt-6">
+                            <h2 className="text-3xl md:text-6xl font-bold text-dark-blue mb-4 uppercase" data-aos="fade-up">Contact Us</h2>
+                            <p className="md:text-lg text-custome-blue md:mt-6" data-aos="fade-up">
                                 Let’s collaborate and create something amazing together!
                                 Reach out to us and take your business to the next level.
                             </p>
@@ -104,9 +125,10 @@ export function ContactUs() {
                         {/* Right side image or content */}
                         <div className="flex justify-center items-center md:w-1/2 w-full">
                             <img
-                                src={image_Contect}
+                                src={ContactUs_Image}
                                 alt="Your Image"
                                 className="w-full h-full "
+                                data-aos="fade-up"
                             />
                         </div>
                     </div>
@@ -117,7 +139,7 @@ export function ContactUs() {
             <section className="relative bg-white pt-16 hidden">
                 <div className="container mx-auto px-4">
                     <div className="mb-10">
-                       
+
                         <div className="rounded-lg overflow-hidden shadow-lg">
                             <img src={Contact_Map} alt="Contact_Map" />
                         </div>
@@ -275,6 +297,24 @@ export function ContactUs() {
                                                 <span>Salesman</span>
                                             </label>
                                         </div>
+                                        <div className="mt-3">
+                                            {/* Conditionally Render Salesman Name Field */}
+                                            {formValues.lead === "Salesman" && (
+                                                <div>
+                                                    <Input
+                                                        label="Salesman Name *"
+                                                        name="salesmanName"
+                                                        value={formValues.salesmanName}
+                                                        onChange={handleChange}
+                                                        error={!!errors.salesmanName} // Highlight the field if there's an error
+                                                    />
+                                                    {errors.salesmanName && (
+                                                        <span className="text-red-500 text-sm">{errors.salesmanName}</span>
+                                                    )}
+                                                </div>
+                                            )}
+
+                                        </div>
                                         {errors.lead && (
                                             <span className="text-red-500 text-sm">{errors.lead}</span>
                                         )}
@@ -300,24 +340,24 @@ export function ContactUs() {
                     <div className="mt-10">
                         <Typography
                             variant="h4"
-                            className="font-bold text-blue-gray-900 mb-6 text-center font-Signika"
+                            className="font-bold text-custome-blue mb-6 text-center font-Signika"
                         >
                             Frequently Asked Questions
                         </Typography>
                         <div className="space-y-4">
                             <details className="bg-gray-100 rounded-lg shadow p-4">
-                                <summary className="font-bold text-blue-gray-800 cursor-pointer">
+                                <summary className="font-bold text-custome-blue cursor-pointer">
                                     What separates you from the competition?
                                 </summary>
-                                <Typography className="text-blue-gray-600 mt-2 font-Signika">
+                                <Typography className="text-custome-blue mt-2 font-Signika">
                                     Our domain knowledge and expertise in solutions providing make us unique.
                                 </Typography>
                             </details>
                             <details className="bg-gray-100 rounded-lg shadow p-4">
-                                <summary className="font-bold text-blue-gray-800 cursor-pointer">
+                                <summary className="font-bold text-custome-blue cursor-pointer">
                                     Is your help desk open 24/7?
                                 </summary>
-                                <Typography className="text-blue-gray-600 mt-2 font-Signika">
+                                <Typography className="text-custome-blue mt-2 font-Signika">
                                     No, however, you can fill up the enquiry form, and our team will attend to it ASAP.
                                 </Typography>
                             </details>

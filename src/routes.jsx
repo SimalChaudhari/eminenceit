@@ -21,17 +21,14 @@ export const routes = [
     path: "/our-services",
     element: <OurServices />,
     submenu: [
-      { name: "Tally Training", path: "/our-services#TallyTraining" },
-      { name: "Website Development", path: "/our-services#WebsiteDevelopment" },
-      { name: "WebAppp Development", path: "/our-services#WebApppDevelopment" },
-      { name: "Hybrid MobileApp Development", path: "/our-services#HybridMobileAppDevelopment" },
-      { name: "NativeApp Development", path: "/our-services#NativeAppDevelopment" },
-      { name: "Tally Development (TDL)", path: "/our-services#TallyDevelopment(TDL)" },
+      { name: "ERP Implementation", path: "/our-services#ERPImplementation" },
+      { name: "Custom Application Development", path: "/our-services#CustomApplicationDevelopment" },
+      { name: "Tally Customizations & Trainings", path: "/our-services#TallyCustomizationsAndTrainings" },
     ],
   },
   {
-    name: "Why Eminence It?",
-    path: "/oup-usp",
+    name: "Eminence It",
+    path: "/eminence-it",
     element: <OurUSP />,
   },
   {
