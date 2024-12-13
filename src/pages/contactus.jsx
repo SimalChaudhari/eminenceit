@@ -275,9 +275,29 @@ export function ContactUs() {
                                     {errors.requirement && (
                                         <span className="text-red-500 text-sm">{errors.requirement}</span>
                                     )}
+
+
+                                    <div className="mt-3">
+                                        {/* Conditionally Render Salesman Name Field */}
+                                        {formValues.lead === "Salesman" && (
+                                            <div>
+                                                <Input
+                                                    label="Salesman Name *"
+                                                    name="salesmanName"
+                                                    value={formValues.salesmanName}
+                                                    onChange={handleChange}
+                                                    error={!!errors.salesmanName} // Highlight the field if there's an error
+                                                />
+                                                {errors.salesmanName && (
+                                                    <span className="text-red-500 text-sm">{errors.salesmanName}</span>
+                                                )}
+                                            </div>
+                                        )}
+
+                                    </div>
                                     <div>
                                         <div className="md:flex items-center md:space-x-4 md:space-y-0 space-y-2">
-                                            <Typography>Lead From:</Typography>
+                                            <Typography className="font-Signika font-semibold" >Lead From:</Typography>
                                             <label className="flex items-center space-x-2">
                                                 <input
                                                     type="radio"
@@ -296,24 +316,6 @@ export function ContactUs() {
                                                 />
                                                 <span>Salesman</span>
                                             </label>
-                                        </div>
-                                        <div className="mt-3">
-                                            {/* Conditionally Render Salesman Name Field */}
-                                            {formValues.lead === "Salesman" && (
-                                                <div>
-                                                    <Input
-                                                        label="Salesman Name *"
-                                                        name="salesmanName"
-                                                        value={formValues.salesmanName}
-                                                        onChange={handleChange}
-                                                        error={!!errors.salesmanName} // Highlight the field if there's an error
-                                                    />
-                                                    {errors.salesmanName && (
-                                                        <span className="text-red-500 text-sm">{errors.salesmanName}</span>
-                                                    )}
-                                                </div>
-                                            )}
-
                                         </div>
                                         {errors.lead && (
                                             <span className="text-red-500 text-sm">{errors.lead}</span>

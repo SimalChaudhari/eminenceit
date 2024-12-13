@@ -2,6 +2,8 @@ import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { Footer } from "@/widgets/layout";
 import BackGround from "../assets/BackGround/Design_Template_BG.jpg";
 import BlueBackGround from "../assets/BackGround/TestimonialsBackground_BLUE_BG.jpg";
+import WebDev4 from "../assets/images/WebDev4.png";
+import WebDev3 from "../assets/images/WebDev3.png";
 import { FaTruck, FaChartLine, FaUsers, FaUserShield, FaBoxes, FaIndustry, FaUserTie } from "react-icons/fa";
 
 export function OurServices() {
@@ -230,7 +232,7 @@ export function OurServices() {
             <section className=" flex justify-center flex-col  md:mb-60 mb-5">
                 <div className="relative">
                     <img
-                        src="/img/Web_Development.webp"
+                        src={WebDev4}
                         alt="hst"
                         className="md:h-[500px] w-full "
                     />
@@ -265,7 +267,7 @@ export function OurServices() {
                 <hr className="md:my-20 mb-5" />
                 <div className="relative">
                     <img
-                        src="/img/Develop_graphic.jpg"
+                    src={WebDev3}
                         alt="hst"
                         className="md:h-[500px] w-full "
                     />
