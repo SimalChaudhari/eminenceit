@@ -7,7 +7,6 @@ import New_Web_App_Development from "../assets/images/New_Web_App_Development.jp
 import hybrid_mobile_app_development from "../assets/images/hybrid_mobile_app_development.jpg";
 import Tally_Training_Image from "../assets/images/Tally_Training_Image.jpg";
 import New_TDL_Graphic from "../assets/images/New_TDL_Graphic.jpg";
-import HeroBack from '../assets/Video/New_Motion_video_homepage.MP4';
 import { FaTruck, FaChartLine, FaUsers, FaUserShield, FaBoxes, FaIndustry, FaUserTie } from "react-icons/fa";
 
 export function OurServices() {
