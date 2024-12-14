@@ -16,6 +16,7 @@ import StrategiesComponent from "@/widgets/components/StrategiesComponent";
 import ReviewsCarousel from "@/widgets/sliders/review-slider";
 
 export function Home() {
+  // Blue_BG
   return (
     <div className="overflow-x-hidden">
       <section className="bg-gray-300 relative">
@@ -26,7 +27,7 @@ export function Home() {
             muted
             loop
           >
-            <source src='/video/Blue_BG.MP4' type="video/mp4" />
+            <source src='/video/Video_home_page.MP4' type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
