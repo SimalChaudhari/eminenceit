@@ -27,7 +27,7 @@ export function Home() {
             muted
             loop
           >
-            <source src='/video/Video_home_page.MP4' type="video/mp4" />
+            <source src='/video/Blue_BG.mp4' type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
