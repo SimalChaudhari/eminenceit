@@ -28,10 +28,10 @@ export function Footer({ title, description, socials, menus, copyright }) {
                   <p> EMINENCE IT SERVICES</p>
                 </div>
                 <div className="flex space-x-2">
-                  <p ><i class="fa-solid fa-location-dot"></i>&nbsp;</p> <p>  #174, 2ND Floor, 3rd Cross, Balaji Layout Mallathahalli Main Road, Bengaluru – 560056</p>
+                  <p ><i class="fa-solid fa-location-dot"></i>&nbsp;</p> <p>  #174, 2nd Floor, 3rd Cross, Balaji Layout, Mallathahalli Main Road, Bengaluru – 560056</p>
                 </div>
                 <div className="flex space-x-2">
-                  <p className="font-semibold"><i class="fa-solid fa-phone"></i></p> <p> 9483627307 / 9742136985</p>
+                  <p className="font-semibold"><i class="fa-solid fa-phone"></i></p> <p>+91 9483627307 / +91  9742136985</p>
                 </div>
                 <div className="flex space-x-2">
                   <p className="font-semibold"><i class="fa-solid fa-envelope"></i></p> <p> info@eminenceit.com</p>
@@ -163,24 +163,7 @@ Footer.defaultProps = {
         { name: "Our history", path: "/aboutus#OurHistory" },
         { name: "who we are ", path: "/aboutus#WhoWeAre" },
         { name: "Our Values", path: "/aboutus#OurValues" },
-        { name: "privacy policys", path: "/privacy-policys" },
-      ],
-    },
-    {
-      name: "solutions",
-      items: [
-        { name: "Microsoft Dynamics", path: "https://www.creative-tim.com/presentation" },
-        { name: "Tally Verticle Solutions", path: "https://www.creative-tim.com/blog" },
-        { name: "Campus 365", path: "https://www.creative-tim.com/blog" },
-      ],
-    },
-    {
-      name: "Partners",
-      items: [
-        { name: "Tally", path: "https://www.creative-tim.com/presentation" },
-        { name: "Microsoft dynamics", path: "https://www.creative-tim.com/blog" },
-        { name: "Credflow", path: "https://www.creative-tim.com/blog" },
-        { name: "Google Partner", path: "https://www.creative-tim.com/blog" },
+        { name: "privacy policy", path: "/privacy-policy" },
       ],
     },
     {
@@ -198,6 +181,23 @@ Footer.defaultProps = {
           name: "Tally Customisation & Trainings",
           path: "/our-services#TallyCustomizationsAndTrainings",
         },
+      ],
+    },
+    {
+      name: "Partners",
+      items: [
+        // { name: "Tally", path: "https://www.creative-tim.com/presentation" },
+        { name: "Microsoft dynamics", path: "https://www.creative-tim.com/blog" },
+        { name: "Google Partner", path: "https://www.creative-tim.com/blog" },
+        { name: "Campus 365", path: "https://www.creative-tim.com/blog" },
+      ],
+    },
+    {
+      name: "solutions",
+      items: [
+        { name: "Microsoft Dynamics", path: "https://www.creative-tim.com/presentation" },
+        { name: "Campus 365", path: "https://www.creative-tim.com/blog" },
+        { name: "Tally Vertical Solutions", path: "https://www.creative-tim.com/blog" },
       ],
     },
   ],

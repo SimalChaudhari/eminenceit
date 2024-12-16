@@ -9,16 +9,16 @@ const imageUrl = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAACUCAMAAAAN
 
 const clientReviews = [
   {
-    name: "Glowcasa Lights",
-    review: "Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.Excellent service and top-notch quality products.",
+    name: "Arora Pakings",
+    review: "Had Done My Work Perfectly And Professionally.",
     image: imageUrl, // Replace with actual image paths
     rating: 5,
   },
   {
-    name: "Christ College",
-    review: "A remarkable experience with seamless collaboration.",
+    name: "United Solutions",
+    review: "Such A WonderFul Team Who Understand The Principles Behind Software Development.",
     image: imageUrl,
-    rating: 4,
+    rating: 5,
   },
   {
     name: "Supple Pack",
@@ -31,12 +31,6 @@ const clientReviews = [
     review: "Highly professional team delivering great results.Highly professional team delivering great results.Highly professional team delivering great results.Highly professional team delivering great results.Highly professional team delivering great results.",
     image: imageUrl,
     rating: 4,
-  },
-  {
-    name: "Coffee Board",
-    review: "They truly understand our needs and deliver excellence.They truly understand our needs and deliver excellence.They truly understand our needs and deliver excellence.",
-    image: imageUrl,
-    rating: 3,
   },
 ];
 
@@ -108,7 +102,7 @@ const ReviewsCarousel = () => {
     <div className="mt-8" 
     data-aos="fade-up"
     >
-      <h2 className=" font-Bai font-bold mb-6 text-dark-blue px-4 md:text-4xl text-2xl">Our Clients with Reviews</h2>
+      <h2 className=" font-Bai font-bold mb-6 text-dark-blue px-4 md:text-4xl text-2xl">Testimonials And Our Clients</h2>
       <Slider {...settings}>
         {clientReviews.map((item, index) => (
           <div key={index} className="px-4">

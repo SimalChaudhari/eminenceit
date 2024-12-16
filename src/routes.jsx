@@ -12,7 +12,7 @@ export const routes = [
     element: <AboutUs />,
     submenu: [
       { name: "Our History", path: "/aboutus#OurHistory" },
-      { name: "Who WeAre", path: "/aboutus#WhoWeAre" },
+      { name: "Who We Are", path: "/aboutus#WhoWeAre" },
       { name: "Our Values", path: "/aboutus#OurValues" },
     ],
   },
@@ -27,8 +27,8 @@ export const routes = [
     ],
   },
   {
-    name: "Eminence It",
-    path: "/eminence-it",
+    name: "Why Eminence IT?",
+    path: "/why-eminence-IT",
     element: <OurUSP />,
   },
   {

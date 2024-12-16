@@ -3,7 +3,7 @@ import { Typography, Button, Input, Select, Option, Textarea } from "@material-t
 import { Footer } from "@/widgets/layout";
 import axios from "axios";
 import Contact_Map from "../assets/images/contactus_page.jpg"
-import ContactUs_Image from "../assets/images/ContactUs_Image.png"
+import ContactUs_Image from "../assets/images/Contact_Us_Image_Background_removebg_preview.png"
 import BackContactUs_Image from "../assets/images/Back_Contact_us.jpg"
 
 export function ContactUs() {
@@ -18,8 +18,8 @@ export function ContactUs() {
         city: "",
         enquiry: "",
         requirement: "",
-        lead: "",
-        salesmanName: "",
+        // lead: "",
+        // salesmanName: "",
     });
 
     const [errors, setErrors] = useState({});
@@ -36,11 +36,11 @@ export function ContactUs() {
         const { name, value } = e.target;
 
         // Reset "salesmanName" if "lead" changes to "Customer"
-        if (name === "lead" && value === "Customer") {
-            setFormValues({ ...formValues, [name]: value, salesmanName: "" });
-        } else {
-            setFormValues({ ...formValues, [name]: value });
-        }
+        // if (name === "lead" && value === "Customer") {
+        //     setFormValues({ ...formValues, [name]: value, salesmanName: "" });
+        // } else {
+        //     setFormValues({ ...formValues, [name]: value });
+        // }
 
         setErrors({ ...errors, [name]: "" });
     };
@@ -59,10 +59,10 @@ export function ContactUs() {
         if (!formValues.enquiry.trim()) newErrors.enquiry = "Please select an enquiry.";
         if (!formValues.requirement.trim())
             newErrors.requirement = "Requirement details are required.";
-        if (!formValues.lead) newErrors.lead = "Please select a lead type.";
-        if (formValues.lead === "Salesman" && !formValues.salesmanName.trim()) {
-            newErrors.salesmanName = "Salesman name is required.";
-        }
+        // if (!formValues.lead) newErrors.lead = "Please select a lead type.";
+        // if (formValues.lead === "Salesman" && !formValues.salesmanName.trim()) {
+        //     newErrors.salesmanName = "Salesman name is required.";
+        // }
 
         return newErrors;
     };
@@ -85,8 +85,8 @@ export function ContactUs() {
                         city: "",
                         enquiry: "",
                         requirement: "",
-                        lead: "",
-                        salesmanName: "",
+                        // lead: "",
+                        // salesmanName: "",
                     });
                 })
                 .catch(error => {
@@ -116,8 +116,8 @@ export function ContactUs() {
                         <div className="flex flex-col justify-center md:w-1/2 w-full">
                             <h2 className="text-3xl md:text-6xl font-bold text-dark-blue mb-4 uppercase" data-aos="fade-up">Contact Us</h2>
                             <p className="md:text-lg text-custome-blue md:mt-6" data-aos="fade-up">
-                                Let’s collaborate and create something amazing together!
-                                Reach out to us and take your business to the next level.
+                            Reach us by filling out the contact form below, <br/>
+                            we will do our best to respond within 24 hours
                             </p>
 
                         </div>
@@ -260,6 +260,8 @@ export function ContactUs() {
                                             <Option value="Mobile App Developments">Mobile App Developments</Option>
                                             <Option value="CRM">CRM</Option>
                                             <Option value="Cloud Computing">Cloud Computing</Option>
+                                            <Option value="Microsoft Dynamics">Microsoft Dynamics</Option>
+                                            <Option value="Others">Others</Option>
                                         </Select>
                                         {errors.enquiry && (
                                             <span className="text-red-500 text-sm">{errors.enquiry}</span>
@@ -275,52 +277,54 @@ export function ContactUs() {
                                     {errors.requirement && (
                                         <span className="text-red-500 text-sm">{errors.requirement}</span>
                                     )}
-
-
-                                    <div className="mt-3">
-                                        {/* Conditionally Render Salesman Name Field */}
-                                        {formValues.lead === "Salesman" && (
-                                            <div>
-                                                <Input
-                                                    label="Salesman Name *"
-                                                    name="salesmanName"
-                                                    value={formValues.salesmanName}
-                                                    onChange={handleChange}
-                                                    error={!!errors.salesmanName} // Highlight the field if there's an error
-                                                />
-                                                {errors.salesmanName && (
-                                                    <span className="text-red-500 text-sm">{errors.salesmanName}</span>
-                                                )}
-                                            </div>
-                                        )}
-
-                                    </div>
-                                    <div>
-                                        <div className="md:flex items-center md:space-x-4 md:space-y-0 space-y-2">
-                                            <Typography className="font-Signika font-semibold" >Lead From:</Typography>
-                                            <label className="flex items-center space-x-2">
-                                                <input
-                                                    type="radio"
-                                                    name="lead"
-                                                    value="Customer"
-                                                    onChange={handleChange}
-                                                />
-                                                <span>Customer</span>
-                                            </label>
-                                            <label className="flex items-center space-x-2">
-                                                <input
-                                                    type="radio"
-                                                    name="lead"
-                                                    value="Salesman"
-                                                    onChange={handleChange}
-                                                />
-                                                <span>Salesman</span>
-                                            </label>
+<br/>
+                                    {/*
+                                        <div className="mt-3">
+                                            {formValues.lead === "Salesman" && (
+                                                <div>
+                                                    <Input
+                                                        label="Salesman Name *"
+                                                        name="salesmanName"
+                                                        value={formValues.salesmanName}
+                                                        onChange={handleChange}
+                                                        error={!!errors.salesmanName}
+                                                    />
+                                                    {errors.salesmanName && (
+                                                        <span className="text-red-500 text-sm">{errors.salesmanName}</span>
+                                                    )}
+                                                </div>
+                                            )}
+    
                                         </div>
-                                        {errors.lead && (
-                                            <span className="text-red-500 text-sm">{errors.lead}</span>
-                                        )}
-                                    </div>
+                                        <div>
+                                            <div className="md:flex items-center md:space-x-4 md:space-y-0 space-y-2">
+                                                <Typography className="font-Signika font-semibold" >Lead From:</Typography>
+                                                <label className="flex items-center space-x-2">
+                                                    <input
+                                                        type="radio"
+                                                        name="lead"
+                                                        value="Customer"
+                                                        onChange={handleChange}
+                                                    />
+                                                    <span>Customer</span>
+                                                </label>
+                                                <label className="flex items-center space-x-2">
+                                                    <input
+                                                        type="radio"
+                                                        name="lead"
+                                                        value="Salesman"
+                                                        onChange={handleChange}
+                                                    />
+                                                    <span>Salesman</span>
+                                                </label>
+                                            </div>
+                                            {errors.lead && (
+                                                <span className="text-red-500 text-sm">{errors.lead}</span>
+                                            )}
+                                        </div>
+                                        */}
+
+
                                     <Button
                                         type="submit"
                                         className="px-8 py-3 font-Signika bg-dark-blue text-white font-semibold text-lg rounded-lg hover:bg-sky-blue transition duration-300"

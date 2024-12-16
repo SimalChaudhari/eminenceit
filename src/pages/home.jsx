@@ -86,9 +86,9 @@ export function Home() {
           data-aos="fade-up"
         >
           {/* Title Section */}
-          <div className="mb-10 text-left">
+          <div className="mb-10 text-left md:w-[30%]">
             <div className="flex items-center gap-4">
-              <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
+              <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl ">
 
 
                 <h3
@@ -155,7 +155,7 @@ export function Home() {
         >
           {/* Title Section */}
           <div className="mb-10 text-left">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4  md:w-[30%]">
               <div className="bg-gradient-to-r from-dark-blue to-custome-blue px-4 py-2 border-[15px] border-dark-blue md:text-4xl text-2xl">
                 <h5
                   variant="h5"
@@ -173,20 +173,24 @@ export function Home() {
           <div className="md:flex justify-between gap-10  font-Signika">
 
             <div className="md:mt-0 mt-10 rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-dark-blue md:w-[70%]">
-              <Typography className="md:text-xl text-lg leading-relaxed">
+              <Typography className="md:text-xl text-lg leading-relaxed" data-aos="fade-up">
 
                 At Eminence IT Services, we go beyond helping businesses transform through technology. We help them in making a meaningful difference; to their customers, and to the communities they serve.
                 <br />
                 <br />
-                Expanding the customer base, increase revenue, and maintain a competitive edge in the market, encourage innovation, Invest in Research and Development, and stay up-to-date with Emerging Technologies. Thereafter, Contribute to the well-being of local communities, support, diversity and inclusion, and promote digital literacy.
-              </Typography>
+                </Typography>
+
+              <Typography className="md:text-xl text-lg leading-relaxed" data-aos="fade-up">
+
+              Expanding the customer base, increase revenue, and maintain a competitive edge in the market, encourage innovation, Invest in Research and Development, and stay up-to-date with Emerging Technologies. Thereafter, Contribute to the well-being of local communities, support, diversity and inclusion, and promote digital literacy.
+            </Typography>
               <br />
             </div>
 
             <div className="md:mt-0 mt-10 rounded-lg bg-gradient-to-b from-dark-blue to-blue-gray-900 p-8 text-white shadow-lg border-[15px] border-dark-blue md:w-[70%]">
               <ul className="list-disc">
                 {objectiveData.map(({ title }) => (
-                  <li key={title} className="my-3 text-white md:text-xl font-normal">
+                  <li key={title} className="my-3 text-white md:text-xl font-normal" data-aos="fade-up">
                     {title}
                   </li>
                 ))}

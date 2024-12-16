@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import HomeSlider from "./HomeSlider.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 
 const sliderData = [
   {
@@ -42,6 +43,42 @@ const sliderData = [
   },
 ];
 
+
+// Custom Arrow Component
+const CustomPrevArrow = ({ onClick }) => (
+  <div
+    className="custom-arrow custom-prev"
+    onClick={onClick}
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "10px",
+      transform: "translateY(-50%)",
+      zIndex: 10,
+      cursor: "pointer",
+    }}
+  >
+    <MdOutlineArrowBackIosNew className="text-3xl text-white font-extrabold" />
+  </div>
+);
+
+const CustomNextArrow = ({ onClick }) => (
+  <div
+    className="custom-arrow custom-next"
+    onClick={onClick}
+    style={{
+      position: "absolute",
+      top: "50%",
+      right: "10px",
+      transform: "translateY(-50%)",
+      zIndex: 10,
+      cursor: "pointer",
+    }}
+  >
+    <MdOutlineArrowForwardIos className="text-3xl text-white font-extrabold" />
+  </div>
+);
+
 const SliderComponent = () => {
   const settings = {
     dots: false,
@@ -49,7 +86,10 @@ const SliderComponent = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 2,
-    arrows: false,
+    autoplay: true,
+    arrows: true,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1024, // For devices with max-width of 1024px

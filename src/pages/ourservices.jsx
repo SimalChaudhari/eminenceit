@@ -4,8 +4,8 @@ import BackGround from "../assets/BackGround/Design_Template_BG.jpg";
 import BlueBackGround from "../assets/BackGround/TestimonialsBackground_BLUE_BG.jpg";
 import New_Website_Development from "../assets/images/New_Website_Development.jpg";
 import New_Web_App_Development from "../assets/images/New_Web_App_Development.jpg";
-import hybrid_mobile_app_development from "../assets/images/hybrid_mobile_app_development.jpg";
-import Tally_Training_Image from "../assets/images/Tally_Training_Image.jpg";
+import hybrid_mobile_app_development from "../assets/images/New_Hybrid_Mobile_App_Development.jpg";
+import Tally_Training_Image from "../assets/images/New_Tally_Training_Image.jpg";
 import New_TDL_Graphic from "../assets/images/New_TDL_Graphic.jpg";
 import { FaTruck, FaChartLine, FaUsers, FaUserShield, FaBoxes, FaIndustry, FaUserTie } from "react-icons/fa";
 
@@ -105,7 +105,7 @@ export function OurServices() {
                                 </div>
                                 <div className="md:w-[49%]  py-5 md:mt-0 mt-5">
 
-                                    <p className="text-custome-blue font-Signika pb-5"> By following best practices, addressing common challenges, and engaging                   stakeholders, organizations can ensure a successful ERP implementation that delivers business benefits and improves system adoption. </p>
+                                    <p className="text-custome-blue font-Signika py-5"> An ERP software solution may consist of different business modules, including </p>
                                     <ul className="text-custome-blue font-Signika list-disc space-y-4 text-xl">
                                         {/* Supply Chain Management */}
                                         <li className="flex items-center gap-4" data-aos="fade-up">
@@ -149,6 +149,8 @@ export function OurServices() {
                                             <span>Human Resources/Payroll</span>
                                         </li>
                                     </ul>
+                                    <p className="text-custome-blue font-Signika py-5"> By following best practices, addressing common challenges, and engaging                   stakeholders, organizations can ensure a successful ERP implementation that delivers business benefits and improves system adoption. </p>
+
 
                                 </div>
                             </div>
@@ -267,10 +269,9 @@ export function OurServices() {
             </section>
 
             <section className=" flex justify-center flex-col md:mb-60 mb-5">
-                <hr className="md:my-20 mb-5" />
                 <div className="relative">
                     <img
-                    src={New_Web_App_Development}
+                        src={New_Web_App_Development}
                         alt="hst"
                         className="md:h-[500px] w-full "
                     />
@@ -304,10 +305,9 @@ export function OurServices() {
             </section>
 
             <section className=" flex justify-center flex-col md:mb-60 mb-5">
-                <hr className="md:my-20 mb-5" />
                 <div className="relative">
                     <img
-                    src={hybrid_mobile_app_development}
+                        src={hybrid_mobile_app_development}
                         alt="hst"
                         className="md:h-[500px] w-full "
                     />
@@ -341,7 +341,6 @@ export function OurServices() {
 
 
             <section className=" flex justify-center flex-col md:mb-60 mb-5">
-                <hr className="md:my-20 mb-5" />
                 <div className="relative">
                     <img
                         src="/img/Mob_App.jpg"
@@ -379,7 +378,7 @@ export function OurServices() {
 
 
             <div id="TallyCustomizationsAndTrainings" />
-            <section className="relative bg-fixed bg-cover bg-center h-screen flex items-center" style={{ backgroundImage: `url(${BackGround})` }}>
+            <section className="relative bg-fixed bg-cover bg-center md:h-screen flex items-center" style={{ backgroundImage: `url(${BackGround})` }}>
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-white/10"></div>
@@ -473,7 +472,6 @@ export function OurServices() {
 
 
             <section className=" flex justify-center flex-col md:mb-40 mb-5 md:pb-20">
-                <hr className="md:my-20 mb-5" />
                 <div className="relative">
                     <img
                         src={New_TDL_Graphic}
@@ -495,9 +493,7 @@ export function OurServices() {
                                 data-aos="fade-up"
                             >
                                 <Typography className=" font-normal text-white lg:text-xl text-left md:py-10 py-4 font-Signika">
-                                    "Tally Development: We customize and extend Tally ERP solutions to meet your unique business needs.
-                                    Our expert team develops tailored plugins, integrations, and modifications to enhance Tally's capabilities,
-                                    streamline your operations, and drive growth."
+                                    Our Tally Development Service offers a range of benefits, including improved efficiency, enhanced decision-making, and customized Solutions. By leveraging Tally Development Services and tools, Any businesses can unlock the full potential of Tally and achieve their goals.
                                 </Typography>
                             </div>
 
@@ -514,13 +510,16 @@ export function OurServices() {
                 <div className="container mx-auto px-4" data-aos="fade-up">
 
                     {/* Download Button */}
-                    <div className="flex justify-center">
+                    <div className="md:flex gap-20 justify-center items-center">
+                        <div className="md:mt-0 mt-5"> <p className="text-xl font-semibold text-custome-blue "> Customized Ready Programs of Tally</p> </div>
+                        <div className="md:mt-0 mt-5">
                         <button
                             onClick={handleDownload}
                             className="px-8 py-3 bg-dark-blue text-white font-semibold text-lg rounded-lg hover:bg-sky-blue transition duration-300"
                         >
-                            Customized Ready Programs of Tally
+                            Download Now
                         </button>
+                        </div>
                     </div>
                 </div>
             </section>

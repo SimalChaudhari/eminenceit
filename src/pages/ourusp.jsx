@@ -4,7 +4,8 @@ import OurExpertiseImage from '../assets/images/Eminence.jpg';
 import Microsoft_D from '../assets/images/Microsoft_D.png';
 import BackGround from "../assets/BackGround/Design_Template_BG.jpg";
 import Our_Technical_Exposure_Graphic from '../assets/images/Our_Technical_Exposure_Graphic.png';
-import ExpertizeBack from '../assets/Video/Our_Expertize.mp4';
+import ExpertizeBackPng from '../assets/images/Our_Expertize_background.jpg';
+import ExpertizeBack from '../assets/Video/New_Our_Expertize_Video2.mp4';
 import AchievementsAndAwardsComponent from "@/widgets/components/AchievementsAndAwardsComponent";
 
 
@@ -49,6 +50,10 @@ export function OurUSP() {
                     muted
                     className="absolute top-0 left-0 w-full h-full object-cover"
                 />
+                {/*
+                    <img src={ExpertizeBackPng} alt="ExpertizeBackPng" className="absolute top-0 left-0 w-full h-full object-cover top-0"/>
+                */}
+
 
                 {/* Overlay and Content */}
                 <div className="absolute inset-0 bg-black bg-opacity-10">
@@ -139,8 +144,8 @@ export function OurUSP() {
                         <div className="mx-auto flex w-full justify-center px-0 lg:px-4 lg:mt-0">
                             <Card className="rounded-lg lg:flex lg:flex-row items-center shadow-none bg-transparent">
                                 {/* Left side image */}
-                                <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 bg-transparent">
-                                    <img src={Our_Technical_Exposure_Graphic} alt="Our_Technical_Exposure_Graphic" className="md:w-96 w-full object-cover" />
+                                <CardBody className="lg:w-1/2 lg:p-6 p-0 lg:mb-0 mb-7 bg-transparent flex items-center justify-center ">
+                                    <img src={Our_Technical_Exposure_Graphic} alt="Our_Technical_Exposure_Graphic" className="md:w-72 w-full object-cover" />
                                 </CardBody>
 
                                 {/* Right side text */}

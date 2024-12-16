@@ -6,24 +6,6 @@ export function PrivacyPolicy() {
     return (
         <div className="overflow-x-hidden">
         
-        {/* Hero Section */}
-            <section className="relative block h-[50vh]">
-                <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/cyber_security.jpg')] bg-cover bg-center scale-x-105 scale-y-100" />
-                <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-                <div className="max-w-8xl relative mx-auto h-full flex items-center">
-                    <div className="flex items-center  h-full w-full">
-                        <div className="text-left bg-white lg:w-[30%] h-44 flex justify-center items-center p-6">
-                            <h1
-                                variant="h1"
-                                className="mb-6 font-black lg:text-7xl md:text-6xl text-5xl text-custome-blue font-Signika"
-                                data-aos="fade-up"
-                            >
-                                Privacy Policy
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
 
             {/* Main Content */}
