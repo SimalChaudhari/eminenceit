@@ -26,14 +26,14 @@ export function ContactUs() {
     const [successMessage, setSuccessMessage] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormValues({ ...formValues, [name]: value });
-    //     setErrors({ ...errors, [name]: "" });
-    // };
-
     const handleChange = (e) => {
         const { name, value } = e.target;
+        setFormValues({ ...formValues, [name]: value });
+        setErrors({ ...errors, [name]: "" });
+    };
+
+    // const handleChange = (e) => {
+    //     const { name, value } = e.target;
 
         // Reset "salesmanName" if "lead" changes to "Customer"
         // if (name === "lead" && value === "Customer") {
@@ -42,8 +42,8 @@ export function ContactUs() {
         //     setFormValues({ ...formValues, [name]: value });
         // }
 
-        setErrors({ ...errors, [name]: "" });
-    };
+    //     setErrors({ ...errors, [name]: "" });
+    // };
 
     const validate = () => {
         const newErrors = {};
